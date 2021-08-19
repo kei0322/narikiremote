@@ -36,7 +36,7 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
     {
         this.turnManager = this.gameObject.AddComponent<PunTurnManager>();//PunTurnManagerをコンポーネントに追加
         this.turnManager.TurnManagerListener = this;//リスナーを？
-        this.turnManager.TurnDuration = 60f;//ターンは5秒にする
+        this.turnManager.TurnDuration = 15f;//ターンは5秒にする
     }
 
     void Update()
