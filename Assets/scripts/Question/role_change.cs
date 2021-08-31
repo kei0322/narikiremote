@@ -15,6 +15,7 @@ public class role_change : MonoBehaviourPunCallbacks
     public GameObject questoner_canvas;
     public GameObject respondent_canvas;
     public GameObject button_canvas;//回答者のボタン
+    public GameObject image_button_set;//イラストボタン
     public GameObject button_role_0;//ロール選択のボタン0
     public GameObject button_role_1;//ロール選択のボタン1
     public GameObject wait_text;//待機中のメッセージ
@@ -131,6 +132,7 @@ public class role_change : MonoBehaviourPunCallbacks
     void close_chanvas()
     {
         button_canvas.gameObject.SetActive(true);
+        image_button_set.gameObject.SetActive(true);
         button_role_0.gameObject.SetActive(true);
         button_role_1.gameObject.SetActive(true);
         wait_text.gameObject.SetActive(false);
