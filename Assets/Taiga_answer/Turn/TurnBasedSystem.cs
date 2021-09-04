@@ -19,7 +19,8 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
 
     [SerializeField]
     private GameObject answer;
-    public GameObject button_set;
+    //answerのリトライボタン削除(岩下 9/5)
+    //public GameObject button_set;
     public GameObject role_change_canvas;
     public GameObject theme_change_canvas;
     public GameObject questoner_canvas;
@@ -120,7 +121,11 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
         //時間制限になった瞬間呼び出される処理(may be)
         //隠していた正解のパネルを表示
         answer.gameObject.SetActive(true);//追記 : ターン開始前に答えがチラチラ見える現象はここでパネルを表示しないようにすればいけるかもです
-        button_set.gameObject.SetActive(true);
+        //button_set.gameObject.SetActive(true);    削除
+        //追記(岩下 9/5)
+        v.ans_time = 5;
+        v.ans_time_flag = false;
+
         Debug.Log(turn);//1回目[1]だった
 
         //正解したら

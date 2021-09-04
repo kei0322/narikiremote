@@ -28,4 +28,8 @@ public class v : MonoBehaviour
     public static int correct1 = 0;//1番(真ん中)が答えの選択をした人数
     public static int correct2 = 0;//2番(1番右)が答えの選択をした人数
     public static bool ep = false; //チーム選択のフラグ
+
+    //追記(9/5)
+    public static float ans_time = 5.0f;//答えから次の問題へ行く時間
+    public static bool ans_time_flag = false;//answertimeのフラグ(true:5秒経過/false:一問終了)
 }
