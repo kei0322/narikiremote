@@ -10,7 +10,7 @@ public class v : MonoBehaviour
     public static int ansum = 0;
     public static bool tohome = false;
     public static string theme = "greatman";
-    public static int choices = 0;
+    public static int[] choices = new int[3];// = 0;
     public static bool ttf = false;
     public static int answer = 0;
 
