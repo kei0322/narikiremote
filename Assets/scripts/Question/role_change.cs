@@ -15,7 +15,6 @@ public class role_change : MonoBehaviourPunCallbacks
     public GameObject questoner_canvas;
     public GameObject respondent_canvas;
     public GameObject button_canvas;//回答者のボタン
-    public GameObject image_button_set;//イラストボタン
     public GameObject button_role_0;//ロール選択のボタン0
     public GameObject button_role_1;//ロール選択のボタン1
     public GameObject wait_text;//待機中のメッセージ
@@ -23,7 +22,7 @@ public class role_change : MonoBehaviourPunCallbacks
     public GameObject scripts;
 
     private int ans;
-    private int cho;
+    private int[] cho = new int[3];
 
     button reset;
     // Start is called before the first frame update
@@ -62,20 +61,37 @@ public class role_change : MonoBehaviourPunCallbacks
     public void questoner()
     {
         ans = (int)Random.Range(0.0f, 3.0f);//三人の中から答えとなる人を一人選ぶ
-        //偉人0~17　カオス0~18
-        if (v.theme == "greatman")
+        if (v.theme == "vegetable")
         {
-            cho = (int)Random.Range(0.0f, 10.0f);//いっぱいの中からクイズのセットを選ぶ
+            do
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    int r = (int)Random.Range(0.0f, 11.0f);
+                    cho[i] = r;//いっぱいの中からクイズのセットを選ぶ
+                }
+            } while (cho[0] == cho[1] || cho[1] == cho[2] || cho[0] == cho[2]);
+            //cho[0] = 0;
+            //cho[1] = 1;
+            //cho[2] = 2;
         }
-        else if(v.theme == "chaos")
+        else if (v.theme == "animal")
         {
-            cho = (int)Random.Range(0.0f, 18.0f);//いっぱいの中からクイズのセットを選ぶ
+            for (int i = 0; i < 3; i++)
+            {
+                cho[i] = (int)Random.Range(0.0f, 18.0f);//いっぱいの中からクイズのセットを選ぶ
+            }
         }
-        
+
         //ans = 2;
         photonView.RPC(nameof(answer_share), RpcTarget.All, ans);//全員の答えとなる人を0番(1番左)に設定する
 
-        photonView.RPC(nameof(choices_share), RpcTarget.All, cho);
+        int c0 = cho[0];
+        int c1 = cho[1];
+        int c2 = cho[2];
+        photonView.RPC(nameof(choices_share0), RpcTarget.All, c0);
+        photonView.RPC(nameof(choices_share1), RpcTarget.All, c1);
+        photonView.RPC(nameof(choices_share2), RpcTarget.All, c2);
 
         respondent_canvas.gameObject.SetActive(true);
         respondent_canvas.gameObject.SetActive(false);
@@ -132,7 +148,6 @@ public class role_change : MonoBehaviourPunCallbacks
     void close_chanvas()
     {
         button_canvas.gameObject.SetActive(true);
-        image_button_set.gameObject.SetActive(true);
         button_role_0.gameObject.SetActive(true);
         button_role_1.gameObject.SetActive(true);
         wait_text.gameObject.SetActive(false);
@@ -152,8 +167,18 @@ public class role_change : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    void choices_share(int c)
+    void choices_share0(int c)
     {
-        v.choices = c;
+        v.choices[0] = c;
+    }
+    [PunRPC]
+    void choices_share1(int c)
+    {
+        v.choices[1] = c;
+    }
+    [PunRPC]
+    void choices_share2(int c)
+    {
+        v.choices[2] = c;
     }
 }

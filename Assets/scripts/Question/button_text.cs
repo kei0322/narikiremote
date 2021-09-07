@@ -17,205 +17,178 @@ public class button_text : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (v.theme == "greatman") gm_image_switch();
-        if (v.theme == "chaos") ch_image_switch();
+        if (v.theme == "vegetable") ve_image_switch();
+        if (v.theme == "animal") an_image_switch();
     }
 
-    private void gm_image_switch()
+    private void ve_image_switch()
     {
-        switch (v.choices)
+        switch (v.choices[0])
         {
             case 0:
-                bt0.GetComponent<Text>().text = "織田信長";
-                bt1.GetComponent<Text>().text = "豊臣秀吉";
-                bt2.GetComponent<Text>().text = "徳川家康";
+                bt0.GetComponent<Text>().text = "ブロッコリー";
                 break;
             case 1:
-                bt0.GetComponent<Text>().text = "西郷隆盛";
-                bt1.GetComponent<Text>().text = "坂本龍馬";
-                bt2.GetComponent<Text>().text = "沖田総司";
+                bt0.GetComponent<Text>().text = "ピーマン";
                 break;
             case 2:
-                bt0.GetComponent<Text>().text = "エジソン";
-                bt1.GetComponent<Text>().text = "ニコラ・テスラ";
-                bt2.GetComponent<Text>().text = "ライト兄弟";
+                bt0.GetComponent<Text>().text = "きゅうり";
                 break;
             case 3:
-                bt0.GetComponent<Text>().text = "野口英世";
-                bt1.GetComponent<Text>().text = "樋口一葉";
-                bt2.GetComponent<Text>().text = "福沢諭吉";
+                bt0.GetComponent<Text>().text = "きゃべつ";
                 break;
-            //case 4:
-                //bt0.GetComponent<Text>().text = "ダーウィン";
-                //bt1.GetComponent<Text>().text = "ニュートン";
-                //bt2.GetComponent<Text>().text = "アルキメデス";
-                //break;
             case 4:
-                bt0.GetComponent<Text>().text = "ベートーヴェン";
-                bt1.GetComponent<Text>().text = "モーツァルト";
-                bt2.GetComponent<Text>().text = "バッハ";
+                bt0.GetComponent<Text>().text = "レタス";
                 break;
-            //case 6:
-                //bt0.GetComponent<Text>().text = "ナポレオン";
-                //bt1.GetComponent<Text>().text = "アレクサンドロス大王";
-                //bt2.GetComponent<Text>().text = "ラムセス2世";
-                //break;
-            //case 7:
-                //bt0.GetComponent<Text>().text = "葛飾北斎";
-                //bt1.GetComponent<Text>().text = "楊貴妃";
-                //bt2.GetComponent<Text>().text = "ゴッホ";
-                //break;
             case 5:
-                bt0.GetComponent<Text>().text = "芥川龍之介";
-                bt1.GetComponent<Text>().text = "太宰治";
-                bt2.GetComponent<Text>().text = "夏目漱石";
+                bt0.GetComponent<Text>().text = "白菜";
                 break;
             case 6:
-                bt0.GetComponent<Text>().text = "ソクラテス";
-                bt1.GetComponent<Text>().text = "フランシスコ・ザビエル";
-                bt2.GetComponent<Text>().text = "ガンジー";
+                bt0.GetComponent<Text>().text = "トマト";
                 break;
-            //case 10:
-                //bt0.GetComponent<Text>().text = "ジャンヌ・ダルク";
-                //bt1.GetComponent<Text>().text = "清少納言";
-                //bt2.GetComponent<Text>().text = "ナイチンゲール";
-                //break;
             case 7:
-                bt0.GetComponent<Text>().text = "明智光秀";
-                bt1.GetComponent<Text>().text = "伊能忠敬";
-                bt2.GetComponent<Text>().text = "渋沢栄一";
+                bt0.GetComponent<Text>().text = "じゃがいも";
                 break;
             case 8:
-                bt0.GetComponent<Text>().text = "レオナルド・ダ・ヴィンチ";
-                bt1.GetComponent<Text>().text = "ミケランジェロ";
-                bt2.GetComponent<Text>().text = "アインシュタイン";
+                bt0.GetComponent<Text>().text = "パプリカ";
                 break;
             case 9:
-                bt0.GetComponent<Text>().text = "チンギス・ハン";
-                bt1.GetComponent<Text>().text = "コロンブス";
-                bt2.GetComponent<Text>().text = "始皇帝";
+                bt0.GetComponent<Text>().text = "小松菜";
                 break;
             case 10:
-                bt0.GetComponent<Text>().text = "ペリー";
-                bt1.GetComponent<Text>().text = "リンカーン";
-                bt2.GetComponent<Text>().text = "ノーベル";
+                bt0.GetComponent<Text>().text = "セロリ";
                 break;
-            //case 15:
-                //bt0.GetComponent<Text>().text = "滝廉太郎";
-                //bt1.GetComponent<Text>().text = "シェイクスピア";
-                //bt2.GetComponent<Text>().text = "アントニオ";
-                //break;
-            //case 16:
-                //bt0.GetComponent<Text>().text = "カエサル";
-                //bt1.GetComponent<Text>().text = "プラトン";
-                //bt2.GetComponent<Text>().text = "源義経";
-                //break;
 
             default:
                 break;
 
+        }
+
+        switch (v.choices[1])
+        {
+            case 0:
+                bt1.GetComponent<Text>().text = "ブロッコリー";
+                break;
+            case 1:
+                bt1.GetComponent<Text>().text = "ピーマン";
+                break;
+            case 2:
+                bt1.GetComponent<Text>().text = "きゅうり";
+                break;
+            case 3:
+                bt1.GetComponent<Text>().text = "キャベツ";
+                break;
+            case 4:
+                bt1.GetComponent<Text>().text = "レタス";
+                break;
+            case 5:
+                bt1.GetComponent<Text>().text = "白菜";
+                break;
+            case 6:
+                bt1.GetComponent<Text>().text = "トマト";
+                break;
+            case 7:
+                bt1.GetComponent<Text>().text = "じゃがいも";
+                break;
+            case 8:
+                bt1.GetComponent<Text>().text = "パプリカ";
+                break;
+            case 9:
+                bt1.GetComponent<Text>().text = "小松菜";
+                break;
+            case 10:
+                bt1.GetComponent<Text>().text = "セロリ";
+                break;
+
+            default:
+                break;
+
+        }
+
+        switch (v.choices[2])
+        {
+            case 0:
+                bt2.GetComponent<Text>().text = "ブロッコリー";
+                break;
+            case 1:
+                bt2.GetComponent<Text>().text = "ピーマン";
+                break;
+            case 2:
+                bt2.GetComponent<Text>().text = "きゅうり";
+                break;
+            case 3:
+                bt2.GetComponent<Text>().text = "キャベツ";
+                break;
+            case 4:
+                bt2.GetComponent<Text>().text = "レタス";
+                break;
+            case 5:
+                bt2.GetComponent<Text>().text = "白菜";
+                break;
+            case 6:
+                bt2.GetComponent<Text>().text = "トマト";
+                break;
+            case 7:
+                bt2.GetComponent<Text>().text = "じゃがいも";
+                break;
+            case 8:
+                bt2.GetComponent<Text>().text = "パプリカ";
+                break;
+            case 9:
+                bt2.GetComponent<Text>().text = "小松菜";
+                break;
+            case 10:
+                bt2.GetComponent<Text>().text = "セロリ";
+                break;
+
+            default:
+                break;
 
         }
 
     }
 
-    private void ch_image_switch()
+    private void an_image_switch()
     {
-        switch (v.choices)
+        switch (v.choices[0])
         {
             case 0:
-                bt0.GetComponent<Text>().text = "ブロッコリー";
-                bt1.GetComponent<Text>().text = "ピーマン";
-                bt2.GetComponent<Text>().text = "きゅうり";
+                bt0.GetComponent<Text>().text = "織田信長";
                 break;
             case 1:
-                bt0.GetComponent<Text>().text = "キャベツ";
-                bt1.GetComponent<Text>().text = "レタス";
-                bt2.GetComponent<Text>().text = "白菜";
+                bt0.GetComponent<Text>().text = "西郷隆盛";
                 break;
             case 2:
-                bt0.GetComponent<Text>().text = "トマト";
-                bt1.GetComponent<Text>().text = "ジャガイモ";
-                bt2.GetComponent<Text>().text = "パプリカ";
+                bt0.GetComponent<Text>().text = "エジソン";
                 break;
             case 3:
-                bt0.GetComponent<Text>().text = "小松菜";
-                bt1.GetComponent<Text>().text = "セロリ";
-                bt2.GetComponent<Text>().text = "カリフラワー";
+                bt0.GetComponent<Text>().text = "野口英世";
                 break;
             case 4:
-                bt0.GetComponent<Text>().text = "トラ";
-                bt1.GetComponent<Text>().text = "ライオン";
-                bt2.GetComponent<Text>().text = "チーター";
+                bt0.GetComponent<Text>().text = "ベートーヴェン";
                 break;
             case 5:
-                bt0.GetComponent<Text>().text = "牛";
-                bt1.GetComponent<Text>().text = "にわとり";
-                bt2.GetComponent<Text>().text = "豚";
+                bt0.GetComponent<Text>().text = "芥川龍之介";
                 break;
             case 6:
-                bt0.GetComponent<Text>().text = "狐";
-                bt1.GetComponent<Text>().text = "狸";
-                bt2.GetComponent<Text>().text = "ネズミ";
+                bt0.GetComponent<Text>().text = "ソクラテス";
                 break;
             case 7:
-                bt0.GetComponent<Text>().text = "車";
-                bt1.GetComponent<Text>().text = "自転車";
-                bt2.GetComponent<Text>().text = "バス";
+                bt0.GetComponent<Text>().text = "明智光秀";
                 break;
             case 8:
-                bt0.GetComponent<Text>().text = "飛行機";
-                bt1.GetComponent<Text>().text = "電車";
-                bt2.GetComponent<Text>().text = "船";
+                bt0.GetComponent<Text>().text = "レオナルド・ダ・ヴィンチ";
                 break;
             case 9:
-                bt0.GetComponent<Text>().text = "F1";
-                bt1.GetComponent<Text>().text = "バギー";
-                bt2.GetComponent<Text>().text = "バイク";
+                bt0.GetComponent<Text>().text = "チンギス・ハン";
                 break;
             case 10:
-                bt0.GetComponent<Text>().text = "ロードローラー";
-                bt1.GetComponent<Text>().text = "ショベルカー";
-                bt2.GetComponent<Text>().text = "ブルドーザー";
-                break;
-            case 11:
-                bt0.GetComponent<Text>().text = "マグロ";
-                bt1.GetComponent<Text>().text = "鮭";
-                bt2.GetComponent<Text>().text = "イワシ";
-                break;
-            case 12:
-                bt0.GetComponent<Text>().text = "サメ";
-                bt1.GetComponent<Text>().text = "シーラカンス";
-                bt2.GetComponent<Text>().text = "ふぐ";
-                break;
-            case 13:
-                bt0.GetComponent<Text>().text = "カブトムシ";
-                bt1.GetComponent<Text>().text = "クワガタムシ";
-                bt2.GetComponent<Text>().text = "蝶";
-                break;
-            case 14:
-                bt0.GetComponent<Text>().text = "蜂";
-                bt1.GetComponent<Text>().text = "セミ";
-                bt2.GetComponent<Text>().text = "アリ";
-                break;
-            case 15:
-                bt0.GetComponent<Text>().text = "野球";
-                bt1.GetComponent<Text>().text = "サッカー";
-                bt2.GetComponent<Text>().text = "剣道";
-                break;
-            case 16:
-                bt0.GetComponent<Text>().text = "バレー";
-                bt1.GetComponent<Text>().text = "バスケ";
-                bt2.GetComponent<Text>().text = "ラグビー";
-                break;
-            case 17:
-                bt0.GetComponent<Text>().text = "卓球";
-                bt1.GetComponent<Text>().text = "テニス";
-                bt2.GetComponent<Text>().text = "バトミントン";
+                bt0.GetComponent<Text>().text = "ペリー";
                 break;
 
             default:
                 break;
+
         }
 
     }

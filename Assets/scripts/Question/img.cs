@@ -22,7 +22,7 @@ public class img : MonoBehaviourPunCallbacks
     //private string theme;
     //private int choices = 0;
     //private bool ttf=false;
-    
+
 
     private void Start()
     {
@@ -33,14 +33,14 @@ public class img : MonoBehaviourPunCallbacks
     private void Update()
     {
         if (v.theme == "greatman") gm_image_switch();
-        
-        
+
+
         //photonView.RPC(nameof(SendChatMessage), RpcTarget.Others, "よろしくお願いします");
     }
 
     private void gm_image_switch()
     {
-        switch (v.choices)
+        switch (v.choices[0])
         {
             case 0:
                 img0.sprite = greatman0;

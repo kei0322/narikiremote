@@ -38,7 +38,7 @@ public class theme_change : MonoBehaviourPunCallbacks
     void Update()
     {
         v.all_player = pc.PlayerCount;
-        matchingnum.text = pc.MaxPlayers +"人中" + pc.PlayerCount + "人が集まりました";
+        matchingnum.text = pc.MaxPlayers + "人中" + pc.PlayerCount + "人が集まりました";
         photonView.RPC(nameof(room_creator), RpcTarget.MasterClient);
         if (pc.PlayerCount == pc.MaxPlayers)
         {
@@ -55,16 +55,19 @@ public class theme_change : MonoBehaviourPunCallbacks
                 theme_button.gameObject.SetActive(false);
             }
             if (v.ep) theme_canvas.gameObject.SetActive(false);
+            int theme_rnd = (int)Random.Range(0.0f, 1.0f);//カテゴリーをランダム
+            if (theme_rnd == 0) vegetable();
+            if (theme_rnd == 1) chaos();
         }
-       
+
         Debug.Log("参加者数 : " + pc.PlayerCount + "/最大人数 : " + pc.MaxPlayers);
         Debug.Log("v.allplayer : " + v.all_player);
     }
 
-    public void greatman()
+    public void vegetable()
     {
         //v.theme = "greatman";
-        photonView.RPC(nameof(theme_set), RpcTarget.All, "greatman");
+        photonView.RPC(nameof(theme_set), RpcTarget.All, "vegetable");
         photonView.RPC(nameof(erase_panel), RpcTarget.All);
     }
 
@@ -104,7 +107,7 @@ public class theme_change : MonoBehaviourPunCallbacks
     }
 
 
-   
+
 
 
 
