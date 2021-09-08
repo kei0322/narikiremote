@@ -66,37 +66,31 @@ public class answer_print : MonoBehaviour
         switch (v.choices[v.answer])
         {
             case 0:
-                this.GetComponent<Text>().text = "ブロッコリー";
+                this.GetComponent<Text>().text = "トラ";
                 break;
             case 1:
-                this.GetComponent<Text>().text = "ピーマン";
+                this.GetComponent<Text>().text = "ライオン";
                 break;
             case 2:
-                this.GetComponent<Text>().text = "きゅうり";
+                this.GetComponent<Text>().text = "チーター";
                 break;
             case 3:
-                this.GetComponent<Text>().text = "キャベツ";
+                this.GetComponent<Text>().text = "牛";
                 break;
             case 4:
-                this.GetComponent<Text>().text = "レタス";
+                this.GetComponent<Text>().text = "にわとり";
                 break;
             case 5:
-                this.GetComponent<Text>().text = "白菜";
+                this.GetComponent<Text>().text = "豚";
                 break;
             case 6:
-                this.GetComponent<Text>().text = "トマト";
+                this.GetComponent<Text>().text = "きつね";
                 break;
             case 7:
-                this.GetComponent<Text>().text = "じゃがいも";
+                this.GetComponent<Text>().text = "たぬき";
                 break;
             case 8:
-                this.GetComponent<Text>().text = "パプリカ";
-                break;
-            case 9:
-                this.GetComponent<Text>().text = "小松菜";
-                break;
-            case 10:
-                this.GetComponent<Text>().text = "セロリ";
+                this.GetComponent<Text>().text = "ネズミ";
                 break;
             default:
                 break;

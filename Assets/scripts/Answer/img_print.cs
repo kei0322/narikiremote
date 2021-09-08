@@ -83,37 +83,31 @@ public class img_print : MonoBehaviourPunCallbacks
         switch (v.choices[v.answer])
         {
             case 0:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/burokkori-");
+                img.sprite = Resources.Load<Sprite>("images/vegetable/tora");
                 break;
             case 1:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/pi-mnn");
+                img.sprite = Resources.Load<Sprite>("images/vegetable/raionn");
                 break;
             case 2:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/kyu-ri");
+                img.sprite = Resources.Load<Sprite>("images/vegetable/ti-ta-");
                 break;
             case 3:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/kyabetu");
+                img.sprite = Resources.Load<Sprite>("images/vegetable/usi");
                 break;
             case 4:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/retasu");
+                img.sprite = Resources.Load<Sprite>("images/vegetable/niwatori");
                 break;
             case 5:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/hakusai");
+                img.sprite = Resources.Load<Sprite>("images/vegetable/buta");
                 break;
             case 6:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/tomato");
+                img.sprite = Resources.Load<Sprite>("images/vegetable/kitune");
                 break;
             case 7:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/jagaimo");
+                img.sprite = Resources.Load<Sprite>("images/vegetable/tanuki");
                 break;
             case 8:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/papurika");
-                break;
-            case 9:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/komatuna");
-                break;
-            case 10:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/serori-");
+                img.sprite = Resources.Load<Sprite>("images/vegetable/nezumi");
                 break;
             default:
                 break;

@@ -90,37 +90,31 @@ public class questoner : MonoBehaviourPunCallbacks
         switch (v.choices[v.answer])
         {
             case 0:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/burokkori-"); name.GetComponent<Text>().text = "ブロッコリー";
+                img.sprite = Resources.Load<Sprite>("images/vegetable/tora"); name.GetComponent<Text>().text = "トラ";
                 break;
             case 1:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/pi-mnn"); name.GetComponent<Text>().text = "ピーマン";
+                img.sprite = Resources.Load<Sprite>("images/vegetable/raionn"); name.GetComponent<Text>().text = "ライオン";
                 break;
             case 2:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/kyu-ri"); name.GetComponent<Text>().text = "きゅうり";
+                img.sprite = Resources.Load<Sprite>("images/vegetable/ti-ta-"); name.GetComponent<Text>().text = "チーター";
                 break;
             case 3:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/kyabetu"); name.GetComponent<Text>().text = "キャベツ";
+                img.sprite = Resources.Load<Sprite>("images/vegetable/usi"); name.GetComponent<Text>().text = "牛";
                 break;
             case 4:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/retasu"); name.GetComponent<Text>().text = "レタス";
+                img.sprite = Resources.Load<Sprite>("images/vegetable/niwatori"); name.GetComponent<Text>().text = "にわとり";
                 break;
             case 5:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/hakusai"); name.GetComponent<Text>().text = "白菜";
+                img.sprite = Resources.Load<Sprite>("images/vegetable/buta"); name.GetComponent<Text>().text = "豚";
                 break;
             case 6:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/tomato"); name.GetComponent<Text>().text = "トマト";
+                img.sprite = Resources.Load<Sprite>("images/vegetable/kitune"); name.GetComponent<Text>().text = "きつね";
                 break;
             case 7:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/jagaimo"); name.GetComponent<Text>().text = "じゃがいも";
+                img.sprite = Resources.Load<Sprite>("images/vegetable/tanuki"); name.GetComponent<Text>().text = "たぬき";
                 break;
             case 8:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/papurika"); name.GetComponent<Text>().text = "パプリカ";
-                break;
-            case 9:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/komatuna"); name.GetComponent<Text>().text = "小松菜";
-                break;
-            case 10:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/serori-"); name.GetComponent<Text>().text = "セロリ";
+                img.sprite = Resources.Load<Sprite>("images/vegetable/nezumi"); name.GetComponent<Text>().text = "ネズミ";
                 break;
             default:
                 break;
