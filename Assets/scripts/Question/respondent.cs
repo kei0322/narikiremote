@@ -195,6 +195,70 @@ public class respondent : MonoBehaviourPunCallbacks
             default:
                 break;
         }
+        switch (v.choices[1])
+        {
+            case 0:
+                img1.sprite = Resources.Load<Sprite>("images/animal/tora");
+                break;
+            case 1:
+                img1.sprite = Resources.Load<Sprite>("images/animal/raionn");
+                break;
+            case 2:
+                img1.sprite = Resources.Load<Sprite>("images/animal/ti-ta-");
+                break;
+            case 3:
+                img1.sprite = Resources.Load<Sprite>("images/animal/usi");
+                break;
+            case 4:
+                img1.sprite = Resources.Load<Sprite>("images/animal/niwatori");
+                break;
+            case 5:
+                img1.sprite = Resources.Load<Sprite>("images/animal/buta");
+                break;
+            case 6:
+                img1.sprite = Resources.Load<Sprite>("images/animal/kitune");
+                break;
+            case 7:
+                img1.sprite = Resources.Load<Sprite>("images/animal/tanuki");
+                break;
+            case 8:
+                img1.sprite = Resources.Load<Sprite>("images/animal/nezumi");
+                break;
+            default:
+                break;
+        }
+        switch (v.choices[2])
+        {
+            case 0:
+                img2.sprite = Resources.Load<Sprite>("images/animal/tora");
+                break;
+            case 1:
+                img2.sprite = Resources.Load<Sprite>("images/animal/raionn");
+                break;
+            case 2:
+                img2.sprite = Resources.Load<Sprite>("images/animal/ti-ta-");
+                break;
+            case 3:
+                img2.sprite = Resources.Load<Sprite>("images/animal/usi");
+                break;
+            case 4:
+                img2.sprite = Resources.Load<Sprite>("images/animal/niwatori");
+                break;
+            case 5:
+                img2.sprite = Resources.Load<Sprite>("images/animal/buta");
+                break;
+            case 6:
+                img2.sprite = Resources.Load<Sprite>("images/animal/kitune");
+                break;
+            case 7:
+                img2.sprite = Resources.Load<Sprite>("images/animal/tanuki");
+                break;
+            case 8:
+                img2.sprite = Resources.Load<Sprite>("images/animal/nezumi");
+                break;
+            default:
+                break;
+        }
 
     }
 

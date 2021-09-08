@@ -77,10 +77,14 @@ public class role_change : MonoBehaviourPunCallbacks
         }
         else if (v.theme == "animal")
         {
-            for (int i = 0; i < 3; i++)
+            do
             {
-                cho[i] = (int)Random.Range(0.0f, 18.0f);//いっぱいの中からクイズのセットを選ぶ
-            }
+                for (int i = 0; i < 3; i++)
+                {
+                    int r = (int)Random.Range(0.0f, 8.0f);
+                    cho[i] = r;//いっぱいの中からクイズのセットを選ぶ
+                }
+            } while (cho[0] == cho[1] || cho[1] == cho[2] || cho[0] == cho[2]);
         }
 
         //ans = 2;

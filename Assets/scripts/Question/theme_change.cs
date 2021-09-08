@@ -57,7 +57,7 @@ public class theme_change : MonoBehaviourPunCallbacks
             if (v.ep) theme_canvas.gameObject.SetActive(false);
             int theme_rnd = (int)Random.Range(0.0f, 1.0f);//カテゴリーをランダム
             if (theme_rnd == 0) vegetable();
-            if (theme_rnd == 1) chaos();
+            if (theme_rnd == 1) animal();
         }
 
         Debug.Log("参加者数 : " + pc.PlayerCount + "/最大人数 : " + pc.MaxPlayers);
@@ -71,10 +71,10 @@ public class theme_change : MonoBehaviourPunCallbacks
         photonView.RPC(nameof(erase_panel), RpcTarget.All);
     }
 
-    public void chaos()
+    public void animal()
     {
         //v.theme = "chaos";
-        photonView.RPC(nameof(theme_set), RpcTarget.All, "chaos");
+        photonView.RPC(nameof(theme_set), RpcTarget.All, "animal");
         photonView.RPC(nameof(erase_panel), RpcTarget.All);
     }
 

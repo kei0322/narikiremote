@@ -153,37 +153,101 @@ public class button_text : MonoBehaviour
         switch (v.choices[0])
         {
             case 0:
-                bt0.GetComponent<Text>().text = "織田信長";
+                bt0.GetComponent<Text>().text = "トラ";
                 break;
             case 1:
-                bt0.GetComponent<Text>().text = "西郷隆盛";
+                bt0.GetComponent<Text>().text = "ライオン";
                 break;
             case 2:
-                bt0.GetComponent<Text>().text = "エジソン";
+                bt0.GetComponent<Text>().text = "チーター";
                 break;
             case 3:
-                bt0.GetComponent<Text>().text = "野口英世";
+                bt0.GetComponent<Text>().text = "牛";
                 break;
             case 4:
-                bt0.GetComponent<Text>().text = "ベートーヴェン";
+                bt0.GetComponent<Text>().text = "にわとり";
                 break;
             case 5:
-                bt0.GetComponent<Text>().text = "芥川龍之介";
+                bt0.GetComponent<Text>().text = "豚";
                 break;
             case 6:
-                bt0.GetComponent<Text>().text = "ソクラテス";
+                bt0.GetComponent<Text>().text = "きつね";
                 break;
             case 7:
-                bt0.GetComponent<Text>().text = "明智光秀";
+                bt0.GetComponent<Text>().text = "たぬき";
                 break;
             case 8:
-                bt0.GetComponent<Text>().text = "レオナルド・ダ・ヴィンチ";
+                bt0.GetComponent<Text>().text = "ネズミ";
                 break;
-            case 9:
-                bt0.GetComponent<Text>().text = "チンギス・ハン";
+
+            default:
                 break;
-            case 10:
-                bt0.GetComponent<Text>().text = "ペリー";
+
+        }
+
+        switch (v.choices[1])
+        {
+            case 0:
+                bt1.GetComponent<Text>().text = "トラ";
+                break;
+            case 1:
+                bt1.GetComponent<Text>().text = "ライオン";
+                break;
+            case 2:
+                bt1.GetComponent<Text>().text = "チーター";
+                break;
+            case 3:
+                bt1.GetComponent<Text>().text = "牛";
+                break;
+            case 4:
+                bt1.GetComponent<Text>().text = "にわとり";
+                break;
+            case 5:
+                bt1.GetComponent<Text>().text = "豚";
+                break;
+            case 6:
+                bt1.GetComponent<Text>().text = "きつね";
+                break;
+            case 7:
+                bt1.GetComponent<Text>().text = "たぬき";
+                break;
+            case 8:
+                bt1.GetComponent<Text>().text = "ネズミ";
+                break;
+
+            default:
+                break;
+
+        }
+
+        switch (v.choices[2])
+        {
+            case 0:
+                bt2.GetComponent<Text>().text = "トラ";
+                break;
+            case 1:
+                bt2.GetComponent<Text>().text = "ライオン";
+                break;
+            case 2:
+                bt2.GetComponent<Text>().text = "チーター";
+                break;
+            case 3:
+                bt2.GetComponent<Text>().text = "牛";
+                break;
+            case 4:
+                bt2.GetComponent<Text>().text = "にわとり";
+                break;
+            case 5:
+                bt2.GetComponent<Text>().text = "豚";
+                break;
+            case 6:
+                bt2.GetComponent<Text>().text = "きつね";
+                break;
+            case 7:
+                bt2.GetComponent<Text>().text = "たぬき";
+                break;
+            case 8:
+                bt2.GetComponent<Text>().text = "ネズミ";
                 break;
 
             default:
