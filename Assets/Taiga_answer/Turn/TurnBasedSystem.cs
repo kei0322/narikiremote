@@ -26,6 +26,7 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
     public GameObject questoner_canvas;
     public GameObject respondent_canvas;
     public GameObject turn_panel;
+    public GameObject Saishuu_Panel;
 
     private PunTurnManager turnManager;
 
@@ -200,8 +201,16 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
     void panel_change()
     {
         v.ep = false;
-        role_change_canvas.gameObject.SetActive(true);
-        theme_change_canvas.gameObject.SetActive(true);
+        //服部追記 8/29
+        if (this.turnManager.Turn % 3 == 0 && this.turnManager.Turn != 0)//this.turnManager.Turn >= 3
+        {
+            Saishuu_Panel.SetActive(true);
+        }
+        else
+        {
+            role_change_canvas.gameObject.SetActive(true);
+            theme_change_canvas.gameObject.SetActive(true);
+        }
     }
 
     [PunRPC]
