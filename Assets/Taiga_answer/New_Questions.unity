@@ -8194,6 +8194,7 @@ MonoBehaviour:
   questoner_canvas: {fileID: 607779125}
   respondent_canvas: {fileID: 1668003937}
   button_canvas: {fileID: 907920926}
+  image_button: {fileID: 1624645626}
   button_role_0: {fileID: 1538701656}
   button_role_1: {fileID: 13739357}
   wait_text: {fileID: 1928854952}
