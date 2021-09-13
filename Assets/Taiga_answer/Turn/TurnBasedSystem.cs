@@ -202,7 +202,7 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
     {
         v.ep = false;
         //服部追記 8/29
-        if (this.turnManager.Turn % 3 == 0 && this.turnManager.Turn != 0)//this.turnManager.Turn >= 3
+        if (this.turnManager.Turn % v.all_player == 0 && this.turnManager.Turn != 0)//this.turnManager.Turn >= 3
         {
             Saishuu_Panel.SetActive(true);
         }
