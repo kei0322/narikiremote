@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 //Photon使うときは必ずオブジェクトにPhoton Viewをつけること！
 using Photon.Pun;
+using Photon.Realtime;
 
 public class role_change : MonoBehaviourPunCallbacks
 {
@@ -16,9 +18,6 @@ public class role_change : MonoBehaviourPunCallbacks
     public GameObject respondent_canvas;
     public GameObject button_canvas;//回答者のボタン
     public GameObject image_button;//回答者のボタン
-    public GameObject button_role_0;//ロール選択のボタン0
-    public GameObject button_role_1;//ロール選択のボタン1
-    public GameObject wait_text;//待機中のメッセージ
     public GameObject timer;
     public GameObject scripts;
 
@@ -26,28 +25,65 @@ public class role_change : MonoBehaviourPunCallbacks
     private int[] cho = new int[3];
 
     button reset;
+
+    //9/12追記(岩下)
+    private int role_random;
+    private bool random_manage;
+    private Player player;
+    private Room pc;
+    private float start_cd;
+    public Text time_text;//残り時間
+    public Text role_text;//役割を教える
     // Start is called before the first frame update
     void Awake()
     {
         questoner_canvas.gameObject.SetActive(false);
         respondent_canvas.gameObject.SetActive(false);
+        //9/14追記(岩下)
+        random_manage = true;
+        player = PhotonNetwork.LocalPlayer;
+        pc = PhotonNetwork.CurrentRoom;
+        start_cd = 5.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (v.select_sum >= v.all_player)
+        Debug.Log("start_flagの状態" + v.start_flag);
+        //9/12追記(岩下)
+        if (pc.PlayerCount == pc.MaxPlayers && !v.start_flag)
         {
-
-            photonView.RPC(nameof(to_wait_frag), RpcTarget.All);
+            start_cd -= Time.deltaTime;
+            time_text.text = start_cd.ToString("0") + "!";
+            if (random_manage)
+            {
+                random_manage = false;
+                //マスターの変数を全員で共有する方法
+                if (PhotonNetwork.IsMasterClient)
+                {
+                    role_random = Random.Range(1, pc.MaxPlayers);
+                    photonView.RPC(nameof(RoleRandom), RpcTarget.All, role_random);
+                }
+            }
+            if (start_cd <= 0) v.wait_frag = true;
+        }
+        else
+        {
+            random_manage = true;
+            start_cd = 5.0f;
         }
 
         if (v.wait_frag == true)
         {
             //*** パネルを開けてからタイマーの処理を開始するので順番変えない***//
-            photonView.RPC(nameof(wait_reset), RpcTarget.All);//フラグリセット
+            //追記
+            v.wait_frag = false;
+            v.start_flag = true;
             photonView.RPC(nameof(role_panel_change), RpcTarget.All);//パネルの表示と非表示を行うよ
-            photonView.RPC(nameof(RoleStartTurn), RpcTarget.All);//スタートターンの処理を全員で同期するよ
+            if (PhotonNetwork.IsMasterClient)
+            {
+                scripts.GetComponent<TurnBasedSystem>().StartTurn();
+            }
         }
     }
 
@@ -104,29 +140,6 @@ public class role_change : MonoBehaviourPunCallbacks
         Debug.Log("出題者を選択します");
     }
 
-    //選択で共通すること
-    public void select_role()
-    {
-        photonView.RPC(nameof(wait_share), RpcTarget.All);
-        //選択ボタン消去&待機メッセージ表示
-        button_role_0.gameObject.SetActive(false);
-        button_role_1.gameObject.SetActive(false);
-        wait_text.gameObject.SetActive(true);
-    }
-
-    [PunRPC]
-    void wait_share()
-    {
-        v.select_sum++;
-        Debug.Log(v.select_sum);
-    }
-
-    [PunRPC]
-    void to_wait_frag()
-    {
-        v.wait_frag = true;
-    }
-
 
 
     [PunRPC]
@@ -136,27 +149,11 @@ public class role_change : MonoBehaviourPunCallbacks
         Invoke("close_chanvas", 0.3f);
     }
 
-    [PunRPC]
-    void RoleStartTurn()
-    {
-        scripts.GetComponent<TurnBasedSystem>().StartTurn();
-    }
-
-    [PunRPC]
-    void wait_reset()
-    {
-        v.select_sum = 0;
-        v.wait_frag = false;
-    }
-
     //ロールチェンジキャンバスの遅延処理
     void close_chanvas()
     {
         button_canvas.gameObject.SetActive(true);
         image_button.gameObject.SetActive(true);
-        button_role_0.gameObject.SetActive(true);
-        button_role_1.gameObject.SetActive(true);
-        wait_text.gameObject.SetActive(false);
         role_change_canvas.gameObject.SetActive(false);
     }
 
@@ -186,5 +183,25 @@ public class role_change : MonoBehaviourPunCallbacks
     void choices_share2(int c)
     {
         v.choices[2] = c;
+    }
+
+    //9/14追記(岩下)
+    //ランダムに一人出題者を選ぶ
+    [PunRPC]
+    void RoleRandom(int randomX)
+    {
+        if (player.ActorNumber == randomX)
+        {
+            questoner();
+            role_text.text = "あなたは【出題者】です";
+            Debug.Log("あなたは出題者です");
+        }
+        else
+        {
+            respondent();
+            role_text.text = "あなたは【回答者】です";
+            Debug.Log("あなたは回答者です");
+        }
+        Debug.Log("乱数 : " + randomX + "  PlayerID : " + player.ActorNumber);
     }
 }

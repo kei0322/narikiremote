@@ -11,6 +11,7 @@ public class ShibariRandomManager : MonoBehaviourPunCallbacks
 {
     public Text RespondentTextBox;
     public Text QuestionerTextBox;
+    public Text TaikiTextBox;
     public string[] ShibariWord;//要素数 : 縛りの数
     private int x;
     private int MasterX;
@@ -22,6 +23,7 @@ public class ShibariRandomManager : MonoBehaviourPunCallbacks
     {
         RespondentTextBox.text = "";//テキストの初期化
         QuestionerTextBox.text = "";//テキストの初期化
+        TaikiTextBox.text = "";//テキストの初期化
         //縛りの内容を記述(余裕あればインスペクターで変更できるようにします)
 
         x = 0;
@@ -49,6 +51,7 @@ public class ShibariRandomManager : MonoBehaviourPunCallbacks
             }
             RespondentTextBox.text = ShibariWord[x]; //テキストの上書き
             QuestionerTextBox.text = ShibariWord[x]; //テキストの上書き
+            TaikiTextBox.text = "条件 : " + ShibariWord[x];
         }
         else
         {
