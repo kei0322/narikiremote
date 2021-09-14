@@ -28,6 +28,7 @@ public class AnswerTimer : MonoBehaviourPunCallbacks
                 time_text.text = "読み込み中";
                 v.turn_frag = true;
                 v.ans_time_flag = true;
+                v.start_flag = false;
                 Debug.Log(v.turn_frag);
             }
         }

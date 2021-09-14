@@ -32,4 +32,6 @@ public class v : MonoBehaviour
     //追記(9/5)
     public static float ans_time = 5.0f;//答えから次の問題へ行く時間
     public static bool ans_time_flag = false;//answertimeのフラグ(true:5秒経過/false:一問終了)
+    //追記(9/14)
+    public static bool start_flag = false;//true:ターン開始 false:一問終了後の5秒後の待機時間
 }
