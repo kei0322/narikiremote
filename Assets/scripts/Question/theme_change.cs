@@ -55,9 +55,10 @@ public class theme_change : MonoBehaviourPunCallbacks
                 theme_button.gameObject.SetActive(false);
             }
             if (v.ep) theme_canvas.gameObject.SetActive(false);
-            int theme_rnd = (int)Random.Range(0.0f, 2.0f);//カテゴリーをランダム
-            if (theme_rnd == 0) vegetable();
-            if (theme_rnd == 1) animal();
+            //int theme_rnd = (int)Random.Range(0.0f, 2.0f);//カテゴリーをランダム
+            //if (theme_rnd == 0) vegetable();
+            //if (theme_rnd == 1) animal();
+            vegetable();
         }
 
         Debug.Log("参加者数 : " + pc.PlayerCount + "/最大人数 : " + pc.MaxPlayers);
