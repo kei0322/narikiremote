@@ -83,31 +83,31 @@ public class img_print : MonoBehaviourPunCallbacks
         switch (v.choices[v.answer])
         {
             case 0:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/tora");
+                img.sprite = Resources.Load<Sprite>("images/animal/tora");
                 break;
             case 1:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/raionn");
+                img.sprite = Resources.Load<Sprite>("images/animal/raionn");
                 break;
             case 2:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/ti-ta-");
+                img.sprite = Resources.Load<Sprite>("images/animal/ti-ta-");
                 break;
             case 3:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/usi");
+                img.sprite = Resources.Load<Sprite>("images/animal/usi");
                 break;
             case 4:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/niwatori");
+                img.sprite = Resources.Load<Sprite>("images/animal/niwatori");
                 break;
             case 5:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/buta");
+                img.sprite = Resources.Load<Sprite>("images/animal/buta");
                 break;
             case 6:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/kitune");
+                img.sprite = Resources.Load<Sprite>("images/animal/kitune");
                 break;
             case 7:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/tanuki");
+                img.sprite = Resources.Load<Sprite>("images/animal/tanuki");
                 break;
             case 8:
-                img.sprite = Resources.Load<Sprite>("images/vegetable/nezumi");
+                img.sprite = Resources.Load<Sprite>("images/animal/nezumi");
                 break;
             default:
                 break;
