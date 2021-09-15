@@ -133,19 +133,22 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
         if (v.answer == 0)
         {
             correct_sum.text = "正解者数は" + v.correct0 + "人!!";
-            correct_rate.text = "演じた人の演技力は・・・" + correct_massege() + "級";
+            //追記(9/15)
+            v.correct_sum += v.correct0;
             Debug.Log("正解者数は" + v.correct0 + "人");
         }
         else if (v.answer == 1)
         {
             correct_sum.text = "正解者数は" + v.correct1 + "人!!";
-            correct_rate.text = "演じた人の演技力は・・・" + correct_massege() + "級";
+            //追記(9/15)
+            v.correct_sum += v.correct1;
             Debug.Log("正解者数は" + v.correct1 + "人");
         }
         else if (v.answer == 2)
         {
             correct_sum.text = "正解者数は" + v.correct2 + "人!!";
-            correct_rate.text = "演じた人の演技力は・・・" + correct_massege() + "級";
+            //追記(9/15)
+            v.correct_sum += v.correct2;
             Debug.Log("正解者数は" + v.correct2 + "人");
         }
     }
@@ -205,6 +208,8 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
         if (this.turnManager.Turn % v.all_player == 0 && this.turnManager.Turn != 0)//this.turnManager.Turn >= 3
         {
             Saishuu_Panel.SetActive(true);
+            //追記(9/15)
+            correct_rate.text = "みんなの演技力は・・・" + correct_massege() + "級";
         }
         else
         {
@@ -213,52 +218,37 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
         }
     }
 
-    [PunRPC]
-    float correct_rate0()
-    {
-        float num0 = Mathf.Floor(1.0f * v.correct0 / v.res_sum * 100);     //切り捨て
-        Debug.Log("正答率" + num0 + "%");
-        return num0;
-    }
-
-    [PunRPC]
-    float correct_rate1()
-    {
-        float num1 = Mathf.Floor(1.0f * v.correct1 / v.res_sum * 100);     //切り捨て
-        Debug.Log("正答率" + num1 + "%");
-        return num1;
-    }
-
-    [PunRPC]
-    float correct_rate2()
-    {
-        float num2 = Mathf.Floor(1.0f * v.correct2 / v.res_sum * 100);     //切り捨て
-        Debug.Log("正答率" + num2 + "%");
-        return num2;
-    }
-
     string correct_massege()
     {
-        if (correct_rate0() == 100 || correct_rate1() == 100 || correct_rate2() == 100)
+        if (all_correct_rate() >= 100)
         {
-            correct_mes = "人間国宝";
+            correct_mes = "名俳優";
         }
-        else if (correct_rate0() >= 60 || correct_rate1() >= 60 || correct_rate2() >= 60)
+        else if (all_correct_rate() >=60)
         {
-            correct_mes = "ハリウッド";
+            correct_mes = "名俳優";
         }
-        else if (correct_rate0() >= 30 || correct_rate1() >= 30 || correct_rate2() >= 30)
+        else if (all_correct_rate() >= 30)
         {
-            correct_mes = "ベテラン";
+            correct_mes = "名俳優";
         }
-        else if (correct_rate0() >= 10 || correct_rate1() >= 10 || correct_rate2() >= 10)
+        else if (all_correct_rate() >= 10)
         {
-            correct_mes = "新人";
+            correct_mes = "名俳優";
         }
-        else if (correct_rate0() >= 0 || correct_rate1() >= 0 || correct_rate2() >= 0)
+        else if (all_correct_rate() >= 0)
         {
-            correct_mes = "凡人";
+            correct_mes = "名俳優";
         }
         return correct_mes;
+    }
+
+    //追記(9/15)
+    float all_correct_rate()
+    {
+        int warukazu = (v.all_player - 1) * v.all_player;//全員の回答数(一問(v.all_player-1)人分 * v.all_player回繰り返す)
+        float num = Mathf.Floor(1.0f * v.correct_sum / warukazu * 100);     //切り捨て
+        Debug.Log("正答率" + num + "%");
+        return num;
     }
 }

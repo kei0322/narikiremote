@@ -34,4 +34,6 @@ public class v : MonoBehaviour
     public static bool ans_time_flag = false;//answertimeのフラグ(true:5秒経過/false:一問終了)
     //追記(9/14)
     public static bool start_flag = false;//true:ターン開始 false:一問終了後の5秒後の待機時間
+    //追記(9/15)
+    public static int correct_sum = 0;//全体の正答率
 }
