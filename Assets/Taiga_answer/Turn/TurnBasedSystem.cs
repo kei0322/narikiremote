@@ -209,7 +209,7 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
         {
             Saishuu_Panel.SetActive(true);
             //追記(9/15)
-            correct_rate.text = "みんなの演技力は・・・" + correct_massege() + "級";
+            correct_rate.text =  correct_massege() + "賞";
         }
         else
         {
