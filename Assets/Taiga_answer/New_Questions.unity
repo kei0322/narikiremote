@@ -857,7 +857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &92846621
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3447,26 +3447,26 @@ MonoBehaviour:
   QuestionerTextBox: {fileID: 502004819}
   TaikiTextBox: {fileID: 1412349113}
   ShibariWord:
-  - "\u76EE\u7DDA\u3092\u96A0\u305B\uFF01"
-  - "\u52D5\u304F\u306A\uFF01"
-  - "\u624B\u3060\u3051\u3067\u8868\u73FE\uFF01"
-  - "\u9854\u3060\u3051\u3067\u8868\u73FE\uFF01"
-  - "\u76EE\u3092\u9589\u3058\u308D\uFF01"
-  - "\u8FD1\u304F\u306B\u3042\u308B\u3082\u306E\u3067\u8868\u73FE\uFF01"
-  - "\u306A\u3093\u3067\u3082\u30A2\u30EA\uFF01"
-  - "\u8A9E\u5C3E\u3092\u300C\u3067\u3059\u308F\u300D\u306B\u3057\u308D\uFF01"
   - "\u8A9E\u5C3E\u3092\u300C\u30B4\u30B6\u30EB\u300D\u306B\u3057\u308D\uFF01"
-  - "\u7B11\u9854\u3067\u8868\u73FE\uFF01"
-  - "\u6012\u308A\u306A\u304C\u3089\u8868\u73FE\uFF01"
-  - "\u60B2\u3057\u305D\u3046\u306B\u8868\u73FE\u30FB\u30FB\u30FB"
-  - "\u4E21\u624B\u3092\u6319\u3052\u3066\u8868\u73FE\uFF01"
-  - "\u30B9\u30DE\u30DB\u3092\u4F7F\u3063\u3066\u8868\u73FE\uFF01"
-  - "\u8A9E\u5C3E\u3092\u300C\u3060\u305C\u300D\u306B\u3057\u308D\uFF01"
-  - "\u9AD8\u3044\u58F0\u3067\u8868\u73FE\uFF01"
-  - "\u4F4E\u3044\u58F0\u3067\u8868\u73FE\uFF01"
-  - "\u7247\u624B\u3092\u3042\u3052\u3066\u8868\u73FE\uFF01"
-  - "\u6B4C\u3044\u306A\u304C\u3089\u8868\u73FE\uFF01"
-  - "\u5F8C\u308D\u3092\u5411\u304D\u306A\u304C\u3089\u8868\u73FE\uFF01"
+  - "\u8A9E\u5C3E\u3092\u300C\u30B4\u30B6\u30EB\u300D\u306B\u3057\u308D\uFF01"
+  - "\u8A9E\u5C3E\u3092\u300C\u30B4\u30B6\u30EB\u300D\u306B\u3057\u308D\uFF01"
+  - "\u8A9E\u5C3E\u3092\u300C\u30B4\u30B6\u30EB\u300D\u306B\u3057\u308D\uFF01"
+  - "\u8A9E\u5C3E\u3092\u300C\u30B4\u30B6\u30EB\u300D\u306B\u3057\u308D\uFF01"
+  - "\u8A9E\u5C3E\u3092\u300C\u30B4\u30B6\u30EB\u300D\u306B\u3057\u308D\uFF01"
+  - "\u8A9E\u5C3E\u3092\u300C\u30B4\u30B6\u30EB\u300D\u306B\u3057\u308D\uFF01"
+  - "\u8A9E\u5C3E\u3092\u300C\u30B4\u30B6\u30EB\u300D\u306B\u3057\u308D\uFF01"
+  - "\u8A9E\u5C3E\u3092\u300C\u30B4\u30B6\u30EB\u300D\u306B\u3057\u308D\uFF01"
+  - "\u8A9E\u5C3E\u3092\u300C\u30B4\u30B6\u30EB\u300D\u306B\u3057\u308D\uFF01"
+  - "\u8A9E\u5C3E\u3092\u300C\u30B4\u30B6\u30EB\u300D\u306B\u3057\u308D\uFF01"
+  - "\u8A9E\u5C3E\u3092\u300C\u30B4\u30B6\u30EB\u300D\u306B\u3057\u308D\uFF01"
+  - "\u8A9E\u5C3E\u3092\u300C\u30B4\u30B6\u30EB\u300D\u306B\u3057\u308D\uFF01"
+  - "\u8A9E\u5C3E\u3092\u300C\u30B4\u30B6\u30EB\u300D\u306B\u3057\u308D\uFF01"
+  - "\u8A9E\u5C3E\u3092\u300C\u30B4\u30B6\u30EB\u300D\u306B\u3057\u308D\uFF01"
+  - "\u8A9E\u5C3E\u3092\u300C\u30B4\u30B6\u30EB\u300D\u306B\u3057\u308D\uFF01"
+  - "\u8A9E\u5C3E\u3092\u300C\u30B4\u30B6\u30EB\u300D\u306B\u3057\u308D\uFF01"
+  - "\u8A9E\u5C3E\u3092\u300C\u30B4\u30B6\u30EB\u300D\u306B\u3057\u308D\uFF01"
+  - "\u8A9E\u5C3E\u3092\u300C\u30B4\u30B6\u30EB\u300D\u306B\u3057\u308D\uFF01"
+  - "\u8A9E\u5C3E\u3092\u300C\u30B4\u30B6\u30EB\u300D\u306B\u3057\u308D\uFF01"
 --- !u!4 &738483068
 Transform:
   m_ObjectHideFlags: 0
@@ -3514,6 +3514,7 @@ GameObject:
   - component: {fileID: 750308796}
   - component: {fileID: 750308795}
   - component: {fileID: 750308797}
+  - component: {fileID: 750308798}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -3593,6 +3594,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed7bde554d4a1414f86be866ac52e023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &750308798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750308793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &763226789
 GameObject:
   m_ObjectHideFlags: 0
@@ -6482,6 +6498,7 @@ GameObject:
   - component: {fileID: 1599991119}
   - component: {fileID: 1599991118}
   - component: {fileID: 1599991120}
+  - component: {fileID: 1599991121}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -6561,6 +6578,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed7bde554d4a1414f86be866ac52e023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1599991121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599991116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1624645626
 GameObject:
   m_ObjectHideFlags: 0

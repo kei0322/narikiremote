@@ -97,20 +97,21 @@ public class role_change : MonoBehaviourPunCallbacks
 
     public void questoner()
     {
-        ans = (int)Random.Range(0.0f, 3.0f);//三人の中から答えとなる人を一人選ぶ
+        //ans = (int)Random.Range(0.0f, 3.0f);//三人の中から答えとなる人を一人選ぶ
+        ans = 1;
         if (v.theme == "vegetable")
         {
-            do
-            {
-                for (int i = 0; i < 3; i++)
-                {
-                    int r = (int)Random.Range(0.0f, 11.0f);
-                    cho[i] = r;//いっぱいの中からクイズのセットを選ぶ
-                }
-            } while (cho[0] == cho[1] || cho[1] == cho[2] || cho[0] == cho[2]);
-            //cho[0] = 0;
-            //cho[1] = 1;
-            //cho[2] = 2;
+            //do
+            //{
+            //    for (int i = 0; i < 3; i++)
+            //    {
+            //        //int r = (int)Random.Range(0.0f, 11.0f);
+            //        //cho[i] = r;//いっぱいの中からクイズのセットを選ぶ
+            //    }
+            //} while (cho[0] == cho[1] || cho[1] == cho[2] || cho[0] == cho[2]);
+            cho[0] = 2;
+            cho[1] = 7;
+            cho[2] = 3;
         }
         else if (v.theme == "animal")
         {
