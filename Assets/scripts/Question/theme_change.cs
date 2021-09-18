@@ -55,7 +55,7 @@ public class theme_change : MonoBehaviourPunCallbacks
                 theme_button.gameObject.SetActive(false);
             }
             if (v.ep) theme_canvas.gameObject.SetActive(false);
-            int theme_rnd = (int)Random.Range(0.0f, 1.0f);//カテゴリーをランダム
+            int theme_rnd = (int)Random.Range(0.0f, 2.0f);//カテゴリーをランダム
             if (theme_rnd == 0) vegetable();
             if (theme_rnd == 1) animal();
             if (theme_rnd == 2) sports();
