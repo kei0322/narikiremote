@@ -210,6 +210,8 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
             Saishuu_Panel.SetActive(true);
             //追記(9/15)
             correct_rate.text =  correct_massege() + "級";
+            v.count = 0;
+            ok.clk = false;
         }
         else
         {

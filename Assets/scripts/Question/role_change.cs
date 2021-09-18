@@ -51,7 +51,7 @@ public class role_change : MonoBehaviourPunCallbacks
     {
         Debug.Log("start_flagの状態" + v.start_flag);
         //9/12追記(岩下)
-        if (pc.PlayerCount == pc.MaxPlayers && !v.start_flag)
+        if (pc.PlayerCount == pc.MaxPlayers && !v.start_flag && v.count == pc.MaxPlayers)
         {
             start_cd -= Time.deltaTime;
             time_text.text = start_cd.ToString("0") + "!";
