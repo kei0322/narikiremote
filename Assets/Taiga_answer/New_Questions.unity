@@ -1629,8 +1629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   img: {fileID: 1736287814}
-  name: {fileID: 0}
-  description: {fileID: 0}
+  name: {fileID: 750308795}
 --- !u!1 &225480911
 GameObject:
   m_ObjectHideFlags: 0

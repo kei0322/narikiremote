@@ -12,7 +12,7 @@ public class questoner : MonoBehaviourPunCallbacks
     public Image img;//左の画像
 
     public Text name;
-    public Text description;
+    //public Text description;
 
     //偉人
     //public Sprite greatman0;
