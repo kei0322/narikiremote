@@ -40,7 +40,7 @@ public class theme_change : MonoBehaviourPunCallbacks
         v.all_player = pc.PlayerCount;
         matchingnum.text = pc.MaxPlayers + "人中" + pc.PlayerCount + "人が集まりました";
         photonView.RPC(nameof(room_creator), RpcTarget.MasterClient);
-        if (pc.PlayerCount == pc.MaxPlayers)
+        if (pc.PlayerCount == pc.MaxPlayers && v.count == pc.MaxPlayers)
         {
             matchingtext.gameObject.SetActive(false);
             pc.IsVisible = false;
