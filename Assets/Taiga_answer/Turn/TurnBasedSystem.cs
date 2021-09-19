@@ -34,6 +34,8 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
     public Text correct_rate;
     string correct_mes;
 
+    public GameObject Rb;//永井：準備完了ボタン
+
     public void Awake()
     {
         this.turnManager = this.gameObject.AddComponent<PunTurnManager>();//PunTurnManagerをコンポーネントに追加
@@ -211,7 +213,8 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
             //追記(9/15)
             correct_rate.text =  correct_massege() + "級";
             v.count = 0;
-            ok.clk = false;
+            //ok.clk = false;
+            Rb.SetActive(true);
         }
         else
         {

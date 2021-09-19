@@ -9,18 +9,20 @@ using Photon.Realtime;
 public class ok : MonoBehaviourPunCallbacks
 {
     // Start is called before the first frame update
-    public static bool clk = false;
-    public int max;
+    // public static bool clk = false;
+    // public int max;
+    public GameObject ReadyB;
     public void OnClickPlus()
     {
-        if (!clk)
-        {
-            clk = true;
+        //if (!clk)
+        //{
+           // clk = true;
             v.count++;
             Debug.Log("v.count : " + v.count);
             //          実行するメソッド名     対象           引数
             photonView.RPC("DebugNum", RpcTarget.AllBuffered, v.count);
-        }
+            ReadyB.SetActive(false);
+        //}
     }
 
 
@@ -32,7 +34,7 @@ public class ok : MonoBehaviourPunCallbacks
     }
     void Start()
     {
-        
+        ReadyB.SetActive(true);
     }
 
     // Update is called once per frame
