@@ -20,7 +20,7 @@ public class CRoomElementScript : MonoBehaviour
         //入室ボタン用roomname取得
         roomname = _RoomName;
         RoomName.text = "部屋名：" + _RoomName;
-        PlayerNumber.text = "人　数：" + _PlayerNumber + "/" + _MaxPlayer;
+        PlayerNumber.text = _PlayerNumber + "/" + _MaxPlayer;
         RoomCreator.text = "作成者：" + _RoomCreator;
     }
 

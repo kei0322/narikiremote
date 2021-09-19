@@ -61,6 +61,7 @@ namespace Com.MyCompany.MyGame
                 RoomElement.transform.SetParent(RoomParent.transform);
                 //RoomElementにルーム情報をセット
                 RoomElement.GetComponent<CRoomElementScript>().SetRoomInfo(roomInfo[i].Name, roomInfo[i].PlayerCount, roomInfo[i].MaxPlayers, roomInfo[i].CustomProperties["RoomCreator"].ToString());
+                RoomElement.GetComponent<CLobbySliderScript>().SetPlayerNumber(roomInfo[i].PlayerCount, roomInfo[i].MaxPlayers);
             }
         }
 
