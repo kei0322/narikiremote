@@ -175,22 +175,31 @@ public class theme_change : MonoBehaviourPunCallbacks
     public void vegetable()
     {
         //v.theme = "greatman";
-        photonView.RPC(nameof(theme_set), RpcTarget.All, "vegetable");
-        photonView.RPC(nameof(erase_panel), RpcTarget.All);
+        if (PhotonNetwork.IsMasterClient)
+        {
+            photonView.RPC(nameof(theme_set), RpcTarget.All, "vegetable");
+            photonView.RPC(nameof(erase_panel), RpcTarget.All);
+        }
     }
 
     public void animal()
     {
         //v.theme = "chaos";
-        photonView.RPC(nameof(theme_set), RpcTarget.All, "animal");
-        photonView.RPC(nameof(erase_panel), RpcTarget.All);
+        if (PhotonNetwork.IsMasterClient)
+        {
+            photonView.RPC(nameof(theme_set), RpcTarget.All, "animal");
+            photonView.RPC(nameof(erase_panel), RpcTarget.All);
+        }
     }
 
     public void sports()
     {
         //v.theme = "chaos";
-        photonView.RPC(nameof(theme_set), RpcTarget.All, "sports");
-        photonView.RPC(nameof(erase_panel), RpcTarget.All);
+        if (PhotonNetwork.IsMasterClient)
+        {
+            photonView.RPC(nameof(theme_set), RpcTarget.All, "sports");
+            photonView.RPC(nameof(erase_panel), RpcTarget.All);
+        }
     }
 
     public override void OnJoinedRoom()
