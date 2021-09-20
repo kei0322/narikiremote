@@ -35,6 +35,7 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
     string correct_mes;
 
     private int plusturn = 1;
+    public GameObject Rb;//永井：準備完了ボタン
 
     public void Awake()
     {
@@ -215,7 +216,11 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
             Saishuu_Panel.SetActive(true);
             //追記(9/15)
             correct_rate.text =  correct_massege() + "級";
+
             plusturn = 1;// 9/20 服部追記
+            v.count = 0;
+            //ok.clk = false;
+            Rb.SetActive(true);
         }
         else
         {

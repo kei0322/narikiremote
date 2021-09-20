@@ -36,4 +36,6 @@ public class v : MonoBehaviour
     public static bool start_flag = false;//true:ターン開始 false:一問終了後の5秒後の待機時間
     //追記(9/15)
     public static int correct_sum = 0;//全体の正答率
+    //永井が作ったよ
+    public static int count = 0;//準備完了のカウント数
 }

@@ -24,6 +24,17 @@ public class theme_change : MonoBehaviourPunCallbacks
     public GameObject matchingtext;
     public Text matchingnum;
 
+    public GameObject ico1;
+    public GameObject ico2;
+    public GameObject ico3;
+    public GameObject ico4;
+    public GameObject ico5;
+    public GameObject ico6;
+    public GameObject ico7;
+    public GameObject ico8;
+    public GameObject ico9;
+    public GameObject ico10;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,15 +43,111 @@ public class theme_change : MonoBehaviourPunCallbacks
         v.ep = false;
         pc = PhotonNetwork.CurrentRoom;
         matchingtext.gameObject.SetActive(true);
+
+        ico1.gameObject.SetActive(false);
+        ico2.gameObject.SetActive(false);
+        ico3.gameObject.SetActive(false);
+        ico4.gameObject.SetActive(false);
+        ico5.gameObject.SetActive(false);
+        ico6.gameObject.SetActive(false);
+        ico7.gameObject.SetActive(false);
+        ico8.gameObject.SetActive(false);
+        ico9.gameObject.SetActive(false);
+        ico10.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (pc.PlayerCount == 1)
+        {
+            ico1.gameObject.SetActive(true);
+        }
+        if (pc.PlayerCount == 2)
+        {
+            ico1.gameObject.SetActive(true);
+            ico2.gameObject.SetActive(true);
+        }
+        if (pc.PlayerCount == 3)
+        {
+            ico1.gameObject.SetActive(true);
+            ico2.gameObject.SetActive(true);
+            ico3.gameObject.SetActive(true);
+        }
+        if (pc.PlayerCount == 4)
+        {
+            ico1.gameObject.SetActive(true);
+            ico2.gameObject.SetActive(true);
+            ico3.gameObject.SetActive(true);
+            ico4.gameObject.SetActive(true);
+        }
+        if (pc.PlayerCount == 5)
+        {
+            ico1.gameObject.SetActive(true);
+            ico2.gameObject.SetActive(true);
+            ico3.gameObject.SetActive(true);
+            ico4.gameObject.SetActive(true);
+            ico5.gameObject.SetActive(true);
+        }
+        if (pc.PlayerCount == 6)
+        {
+            ico1.gameObject.SetActive(true);
+            ico2.gameObject.SetActive(true);
+            ico3.gameObject.SetActive(true);
+            ico4.gameObject.SetActive(true);
+            ico5.gameObject.SetActive(true);
+            ico6.gameObject.SetActive(true);
+        }
+        if (pc.PlayerCount == 7)
+        {
+            ico1.gameObject.SetActive(true);
+            ico2.gameObject.SetActive(true);
+            ico3.gameObject.SetActive(true);
+            ico4.gameObject.SetActive(true);
+            ico5.gameObject.SetActive(true);
+            ico6.gameObject.SetActive(true);
+            ico7.gameObject.SetActive(true);
+        }
+        if (pc.PlayerCount == 8)
+        {
+            ico1.gameObject.SetActive(true);
+            ico2.gameObject.SetActive(true);
+            ico3.gameObject.SetActive(true);
+            ico4.gameObject.SetActive(true);
+            ico5.gameObject.SetActive(true);
+            ico6.gameObject.SetActive(true);
+            ico7.gameObject.SetActive(true);
+            ico8.gameObject.SetActive(true);
+        }
+        if (pc.PlayerCount == 9)
+        {
+            ico1.gameObject.SetActive(true);
+            ico2.gameObject.SetActive(true);
+            ico3.gameObject.SetActive(true);
+            ico4.gameObject.SetActive(true);
+            ico5.gameObject.SetActive(true);
+            ico6.gameObject.SetActive(true);
+            ico7.gameObject.SetActive(true);
+            ico8.gameObject.SetActive(true);
+            ico9.gameObject.SetActive(true);
+        }
+        if (pc.PlayerCount == 10)
+        {
+            ico1.gameObject.SetActive(true);
+            ico2.gameObject.SetActive(true);
+            ico3.gameObject.SetActive(true);
+            ico4.gameObject.SetActive(true);
+            ico5.gameObject.SetActive(true);
+            ico6.gameObject.SetActive(true);
+            ico7.gameObject.SetActive(true);
+            ico8.gameObject.SetActive(true);
+            ico9.gameObject.SetActive(true);
+            ico10.gameObject.SetActive(true);
+        }
         v.all_player = pc.PlayerCount;
         matchingnum.text = pc.MaxPlayers + "人中" + pc.PlayerCount + "人が集まりました";
         photonView.RPC(nameof(room_creator), RpcTarget.MasterClient);
-        if (pc.PlayerCount == pc.MaxPlayers)
+        if (pc.PlayerCount == pc.MaxPlayers && v.count == pc.MaxPlayers)
         {
             matchingtext.gameObject.SetActive(false);
             pc.IsVisible = false;
@@ -55,7 +162,7 @@ public class theme_change : MonoBehaviourPunCallbacks
                 theme_button.gameObject.SetActive(false);
             }
             if (v.ep) theme_canvas.gameObject.SetActive(false);
-            int theme_rnd = (int)Random.Range(0.0f, 1.0f);//カテゴリーをランダム
+            int theme_rnd = (int)Random.Range(0.0f, 2.0f);//カテゴリーをランダム
             if (theme_rnd == 0) vegetable();
             if (theme_rnd == 1) animal();
             if (theme_rnd == 2) sports();
@@ -68,22 +175,31 @@ public class theme_change : MonoBehaviourPunCallbacks
     public void vegetable()
     {
         //v.theme = "greatman";
-        photonView.RPC(nameof(theme_set), RpcTarget.All, "vegetable");
-        photonView.RPC(nameof(erase_panel), RpcTarget.All);
+        if (PhotonNetwork.IsMasterClient)
+        {
+            photonView.RPC(nameof(theme_set), RpcTarget.All, "vegetable");
+            photonView.RPC(nameof(erase_panel), RpcTarget.All);
+        }
     }
 
     public void animal()
     {
         //v.theme = "chaos";
-        photonView.RPC(nameof(theme_set), RpcTarget.All, "animal");
-        photonView.RPC(nameof(erase_panel), RpcTarget.All);
+        if (PhotonNetwork.IsMasterClient)
+        {
+            photonView.RPC(nameof(theme_set), RpcTarget.All, "animal");
+            photonView.RPC(nameof(erase_panel), RpcTarget.All);
+        }
     }
 
     public void sports()
     {
         //v.theme = "chaos";
-        photonView.RPC(nameof(theme_set), RpcTarget.All, "sports");
-        photonView.RPC(nameof(erase_panel), RpcTarget.All);
+        if (PhotonNetwork.IsMasterClient)
+        {
+            photonView.RPC(nameof(theme_set), RpcTarget.All, "sports");
+            photonView.RPC(nameof(erase_panel), RpcTarget.All);
+        }
     }
 
     public override void OnJoinedRoom()
