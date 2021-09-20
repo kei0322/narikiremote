@@ -34,6 +34,8 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
     public Text correct_rate;
     string correct_mes;
 
+    private int plusturn = 1;
+
     public void Awake()
     {
         this.turnManager = this.gameObject.AddComponent<PunTurnManager>();//PunTurnManagerをコンポーネントに追加
@@ -135,6 +137,7 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
             correct_sum.text = "正解者数は" + v.correct0 + "人!!";
             //追記(9/15)
             v.correct_sum += v.correct0;
+            plusturn += 1;// 9/20 服部追記
             Debug.Log("正解者数は" + v.correct0 + "人");
         }
         else if (v.answer == 1)
@@ -142,6 +145,7 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
             correct_sum.text = "正解者数は" + v.correct1 + "人!!";
             //追記(9/15)
             v.correct_sum += v.correct1;
+            plusturn += 1;// 9/20 服部追記
             Debug.Log("正解者数は" + v.correct1 + "人");
         }
         else if (v.answer == 2)
@@ -149,6 +153,7 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
             correct_sum.text = "正解者数は" + v.correct2 + "人!!";
             //追記(9/15)
             v.correct_sum += v.correct2;
+            plusturn += 1;// 9/20 服部追記
             Debug.Log("正解者数は" + v.correct2 + "人");
         }
     }
@@ -210,6 +215,7 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
             Saishuu_Panel.SetActive(true);
             //追記(9/15)
             correct_rate.text =  correct_massege() + "級";
+            plusturn = 1;// 9/20 服部追記
         }
         else
         {
