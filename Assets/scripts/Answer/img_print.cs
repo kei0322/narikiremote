@@ -32,6 +32,7 @@ public class img_print : MonoBehaviourPunCallbacks
     {
         if (v.theme == "vegetable") ve_image_switch();
         if (v.theme == "animal") an_image_switch();
+        if (v.theme == "sports") sp_image_switch();
         //if (v.tohome == true) SceneManager.LoadScene("home");
     }
 
@@ -108,6 +109,43 @@ public class img_print : MonoBehaviourPunCallbacks
                 break;
             case 8:
                 img.sprite = Resources.Load<Sprite>("images/animal/nezumi");
+                break;
+            default:
+                break;
+        }
+
+    }
+
+    private void sp_image_switch()
+    {
+        switch (v.choices[v.answer])
+        {
+            case 0:
+                img.sprite = Resources.Load<Sprite>("images/sports/yakyuu");
+                break;
+            case 1:
+                img.sprite = Resources.Load<Sprite>("images/sports/sakka-");
+                break;
+            case 2:
+                img.sprite = Resources.Load<Sprite>("images/sports/kenndou");
+                break;
+            case 3:
+                img.sprite = Resources.Load<Sprite>("images/sports/bare-");
+                break;
+            case 4:
+                img.sprite = Resources.Load<Sprite>("images/sports/basuke");
+                break;
+            case 5:
+                img.sprite = Resources.Load<Sprite>("images/sports/ragubi-");
+                break;
+            case 6:
+                img.sprite = Resources.Load<Sprite>("images/sports/takkyuu");
+                break;
+            case 7:
+                img.sprite = Resources.Load<Sprite>("images/sports/tenisu");
+                break;
+            case 8:
+                img.sprite = Resources.Load<Sprite>("images/sports/batominntonn");
                 break;
             default:
                 break;

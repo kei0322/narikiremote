@@ -37,6 +37,7 @@ public class questoner : MonoBehaviourPunCallbacks
     {
         if (v.theme == "vegetable") ve_image_switch();
         if (v.theme == "animal") an_image_switch();
+        if (v.theme == "sports") sp_image_switch();
         if (v.ansum >= v.player_count) photonView.RPC(nameof(to_test_frag), RpcTarget.All);
         //現状Answerシーンに飛ぶ必要がないのでコメントアウトしています 岩下
         //if (v.ttf == true) SceneManager.LoadScene("Answer");
@@ -115,6 +116,43 @@ public class questoner : MonoBehaviourPunCallbacks
                 break;
             case 8:
                 img.sprite = Resources.Load<Sprite>("images/animal/nezumi"); name.GetComponent<Text>().text = "ネズミ";
+                break;
+            default:
+                break;
+        }
+
+    }
+
+    private void sp_image_switch()
+    {
+        switch (v.choices[v.answer])
+        {
+            case 0:
+                img.sprite = Resources.Load<Sprite>("images/sports/yakyuu"); name.GetComponent<Text>().text = "野球";
+                break;
+            case 1:
+                img.sprite = Resources.Load<Sprite>("images/sports/sakka-"); name.GetComponent<Text>().text = "サッカー";
+                break;
+            case 2:
+                img.sprite = Resources.Load<Sprite>("images/sports/kenndou"); name.GetComponent<Text>().text = "剣道";
+                break;
+            case 3:
+                img.sprite = Resources.Load<Sprite>("images/sports/bare-"); name.GetComponent<Text>().text = "バレー";
+                break;
+            case 4:
+                img.sprite = Resources.Load<Sprite>("images/sports/basuke"); name.GetComponent<Text>().text = "バスケ";
+                break;
+            case 5:
+                img.sprite = Resources.Load<Sprite>("images/sports/ragubi-"); name.GetComponent<Text>().text = "ラグビー";
+                break;
+            case 6:
+                img.sprite = Resources.Load<Sprite>("images/sports/takkyuu"); name.GetComponent<Text>().text = "卓球";
+                break;
+            case 7:
+                img.sprite = Resources.Load<Sprite>("images/sports/tenisu"); name.GetComponent<Text>().text = "テニス";
+                break;
+            case 8:
+                img.sprite = Resources.Load<Sprite>("images/sports/batominntonn"); name.GetComponent<Text>().text = "バドミントン";
                 break;
             default:
                 break;

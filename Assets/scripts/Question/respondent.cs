@@ -35,6 +35,7 @@ public class respondent : MonoBehaviourPunCallbacks
     {
         if (v.theme == "vegetable") ve_image_switch();
         if (v.theme == "animal") an_image_switch();
+        if (v.theme == "sports") sp_image_switch();
 
         if (v.ansum >= v.player_count) photonView.RPC(nameof(to_test_frag), RpcTarget.All);
         //現状Answerシーンに飛ぶ必要がないのでコメントアウトしています 岩下
@@ -255,6 +256,107 @@ public class respondent : MonoBehaviourPunCallbacks
                 break;
             case 8:
                 img2.sprite = Resources.Load<Sprite>("images/animal/nezumi");
+                break;
+            default:
+                break;
+        }
+
+    }
+
+    private void sp_image_switch()
+    {
+        switch (v.choices[0])
+        {
+            case 0:
+                img0.sprite = Resources.Load<Sprite>("images/sports/yakyuu");
+                break;
+            case 1:
+                img0.sprite = Resources.Load<Sprite>("images/sports/sakka-");
+                break;
+            case 2:
+                img0.sprite = Resources.Load<Sprite>("images/sports/kenndou");
+                break;
+            case 3:
+                img0.sprite = Resources.Load<Sprite>("images/sports/bare-");
+                break;
+            case 4:
+                img0.sprite = Resources.Load<Sprite>("images/sports/basuke");
+                break;
+            case 5:
+                img0.sprite = Resources.Load<Sprite>("images/sports/ragubi-");
+                break;
+            case 6:
+                img0.sprite = Resources.Load<Sprite>("images/sports/takkyuu");
+                break;
+            case 7:
+                img0.sprite = Resources.Load<Sprite>("images/sports/tenisu");
+                break;
+            case 8:
+                img0.sprite = Resources.Load<Sprite>("images/sports/batominntonn");
+                break;
+            default:
+                break;
+        }
+        switch (v.choices[1])
+        {
+            case 0:
+                img1.sprite = Resources.Load<Sprite>("images/sports/yakyuu");
+                break;
+            case 1:
+                img1.sprite = Resources.Load<Sprite>("images/sports/sakka-");
+                break;
+            case 2:
+                img1.sprite = Resources.Load<Sprite>("images/sports/kenndou");
+                break;
+            case 3:
+                img1.sprite = Resources.Load<Sprite>("images/sports/bare-");
+                break;
+            case 4:
+                img1.sprite = Resources.Load<Sprite>("images/sports/basuke");
+                break;
+            case 5:
+                img1.sprite = Resources.Load<Sprite>("images/sports/ragubi-");
+                break;
+            case 6:
+                img1.sprite = Resources.Load<Sprite>("images/sports/takkyuu");
+                break;
+            case 7:
+                img1.sprite = Resources.Load<Sprite>("images/sports/tenisu");
+                break;
+            case 8:
+                img1.sprite = Resources.Load<Sprite>("images/sports/batominntonn");
+                break;
+            default:
+                break;
+        }
+        switch (v.choices[2])
+        {
+            case 0:
+                img2.sprite = Resources.Load<Sprite>("images/sports/yakyuu");
+                break;
+            case 1:
+                img2.sprite = Resources.Load<Sprite>("images/sports/sakka-");
+                break;
+            case 2:
+                img2.sprite = Resources.Load<Sprite>("images/sports/kenndou");
+                break;
+            case 3:
+                img2.sprite = Resources.Load<Sprite>("images/sports/bare-");
+                break;
+            case 4:
+                img2.sprite = Resources.Load<Sprite>("images/sports/basuke");
+                break;
+            case 5:
+                img2.sprite = Resources.Load<Sprite>("images/sports/ragubi-");
+                break;
+            case 6:
+                img2.sprite = Resources.Load<Sprite>("images/sports/takkyuu");
+                break;
+            case 7:
+                img2.sprite = Resources.Load<Sprite>("images/sports/tenisu");
+                break;
+            case 8:
+                img2.sprite = Resources.Load<Sprite>("images/sports/batominntonn");
                 break;
             default:
                 break;
