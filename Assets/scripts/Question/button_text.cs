@@ -19,6 +19,7 @@ public class button_text : MonoBehaviour
     {
         if (v.theme == "vegetable") ve_image_switch();
         if (v.theme == "animal") an_image_switch();
+        if (v.theme == "sports") sp_image_switch();
     }
 
     private void ve_image_switch()
@@ -253,6 +254,115 @@ public class button_text : MonoBehaviour
             default:
                 break;
 
+        }
+
+    }
+
+    private void sp_image_switch()
+    {
+        switch (v.choices[0])
+        {
+            case 0:
+                bt0.GetComponent<Text>().text = "野球";
+                break;
+            case 1:
+                bt0.GetComponent<Text>().text = "サッカー";
+                break;
+            case 2:
+                bt0.GetComponent<Text>().text = "剣道";
+                break;
+            case 3:
+                bt0.GetComponent<Text>().text = "バレー";
+                break;
+            case 4:
+                bt0.GetComponent<Text>().text = "バスケ";
+                break;
+            case 5:
+                bt0.GetComponent<Text>().text = "ラグビー";
+                break;
+            case 6:
+                bt0.GetComponent<Text>().text = "卓球";
+                break;
+            case 7:
+                bt0.GetComponent<Text>().text = "テニス";
+                break;
+            case 8:
+                bt0.GetComponent<Text>().text = "バドミントン";
+                break;
+
+            default:
+                break;
+
+        }
+
+        switch (v.choices[1])
+        {
+
+            case 0:
+                bt1.GetComponent<Text>().text = "野球";
+                break;
+            case 1:
+                bt1.GetComponent<Text>().text = "サッカー";
+                break;
+            case 2:
+                bt1.GetComponent<Text>().text = "剣道";
+                break;
+            case 3:
+                bt1.GetComponent<Text>().text = "バレー";
+                break;
+            case 4:
+                bt1.GetComponent<Text>().text = "バスケ";
+                break;
+            case 5:
+                bt1.GetComponent<Text>().text = "ラグビー";
+                break;
+            case 6:
+                bt1.GetComponent<Text>().text = "卓球";
+                break;
+            case 7:
+                bt1.GetComponent<Text>().text = "テニス";
+                break;
+            case 8:
+                bt1.GetComponent<Text>().text = "バドミントン";
+                break;
+
+            default:
+                break;
+        }
+
+        switch (v.choices[2])
+        {
+
+            case 0:
+                bt2.GetComponent<Text>().text = "野球";
+                break;
+            case 1:
+                bt2.GetComponent<Text>().text = "サッカー";
+                break;
+            case 2:
+                bt2.GetComponent<Text>().text = "剣道";
+                break;
+            case 3:
+                bt2.GetComponent<Text>().text = "バレー";
+                break;
+            case 4:
+                bt2.GetComponent<Text>().text = "バスケ";
+                break;
+            case 5:
+                bt2.GetComponent<Text>().text = "ラグビー";
+                break;
+            case 6:
+                bt2.GetComponent<Text>().text = "卓球";
+                break;
+            case 7:
+                bt2.GetComponent<Text>().text = "テニス";
+                break;
+            case 8:
+                bt2.GetComponent<Text>().text = "バドミントン";
+                break;
+
+            default:
+                break;
         }
 
     }
