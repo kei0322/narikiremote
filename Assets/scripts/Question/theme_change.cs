@@ -35,6 +35,17 @@ public class theme_change : MonoBehaviourPunCallbacks
     public GameObject ico9;
     public GameObject ico10;
 
+    public GameObject dico1;
+    public GameObject dico2;
+    public GameObject dico3;
+    public GameObject dico4;
+    public GameObject dico5;
+    public GameObject dico6;
+    public GameObject dico7;
+    public GameObject dico8;
+    public GameObject dico9;
+    public GameObject dico10;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +65,17 @@ public class theme_change : MonoBehaviourPunCallbacks
         ico8.gameObject.SetActive(false);
         ico9.gameObject.SetActive(false);
         ico10.gameObject.SetActive(false);
+
+        dico1.gameObject.SetActive(false);
+        dico2.gameObject.SetActive(false);
+        dico3.gameObject.SetActive(false);
+        dico4.gameObject.SetActive(false);
+        dico5.gameObject.SetActive(false);
+        dico6.gameObject.SetActive(false);
+        dico7.gameObject.SetActive(false);
+        dico8.gameObject.SetActive(false);
+        dico9.gameObject.SetActive(false);
+        dico10.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -143,6 +165,92 @@ public class theme_change : MonoBehaviourPunCallbacks
             ico8.gameObject.SetActive(true);
             ico9.gameObject.SetActive(true);
             ico10.gameObject.SetActive(true);
+        }
+
+        if (pc.MaxPlayers == 1)
+        {
+            dico1.gameObject.SetActive(true);
+        }
+        if (pc.MaxPlayers == 2)
+        {
+            dico1.gameObject.SetActive(true);
+            dico2.gameObject.SetActive(true);
+        }
+        if (pc.MaxPlayers == 3)
+        {
+            dico1.gameObject.SetActive(true);
+            dico2.gameObject.SetActive(true);
+            dico3.gameObject.SetActive(true);
+        }
+        if (pc.MaxPlayers == 4)
+        {
+            dico1.gameObject.SetActive(true);
+            dico2.gameObject.SetActive(true);
+            dico3.gameObject.SetActive(true);
+            dico4.gameObject.SetActive(true);
+        }
+        if (pc.MaxPlayers == 5)
+        {
+            dico1.gameObject.SetActive(true);
+            dico2.gameObject.SetActive(true);
+            dico3.gameObject.SetActive(true);
+            dico4.gameObject.SetActive(true);
+            dico5.gameObject.SetActive(true);
+        }
+        if (pc.MaxPlayers == 6)
+        {
+            dico1.gameObject.SetActive(true);
+            dico2.gameObject.SetActive(true);
+            dico3.gameObject.SetActive(true);
+            dico4.gameObject.SetActive(true);
+            dico5.gameObject.SetActive(true);
+            dico6.gameObject.SetActive(true);
+        }
+        if (pc.MaxPlayers == 7)
+        {
+            dico1.gameObject.SetActive(true);
+            dico2.gameObject.SetActive(true);
+            dico3.gameObject.SetActive(true);
+            dico4.gameObject.SetActive(true);
+            dico5.gameObject.SetActive(true);
+            dico6.gameObject.SetActive(true);
+            dico7.gameObject.SetActive(true);
+        }
+        if (pc.MaxPlayers == 8)
+        {
+            dico1.gameObject.SetActive(true);
+            dico2.gameObject.SetActive(true);
+            dico3.gameObject.SetActive(true);
+            dico4.gameObject.SetActive(true);
+            dico5.gameObject.SetActive(true);
+            dico6.gameObject.SetActive(true);
+            dico7.gameObject.SetActive(true);
+            dico8.gameObject.SetActive(true);
+        }
+        if (pc.MaxPlayers == 9)
+        {
+            dico1.gameObject.SetActive(true);
+            dico2.gameObject.SetActive(true);
+            dico3.gameObject.SetActive(true);
+            dico4.gameObject.SetActive(true);
+            dico5.gameObject.SetActive(true);
+            dico6.gameObject.SetActive(true);
+            dico7.gameObject.SetActive(true);
+            dico8.gameObject.SetActive(true);
+            dico9.gameObject.SetActive(true);
+        }
+        if (pc.MaxPlayers == 10)
+        {
+            dico1.gameObject.SetActive(true);
+            dico2.gameObject.SetActive(true);
+            dico3.gameObject.SetActive(true);
+            dico4.gameObject.SetActive(true);
+            dico5.gameObject.SetActive(true);
+            dico6.gameObject.SetActive(true);
+            dico7.gameObject.SetActive(true);
+            dico8.gameObject.SetActive(true);
+            dico9.gameObject.SetActive(true);
+            dico10.gameObject.SetActive(true);
         }
         v.all_player = pc.PlayerCount;
         matchingnum.text = pc.MaxPlayers + "人中" + pc.PlayerCount + "人が集まりました";
