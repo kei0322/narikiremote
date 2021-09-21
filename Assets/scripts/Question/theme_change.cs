@@ -167,93 +167,197 @@ public class theme_change : MonoBehaviourPunCallbacks
             ico10.gameObject.SetActive(true);
         }
 
-        if (pc.MaxPlayers == 1)
-        {
-            dico1.gameObject.SetActive(true);
-        }
         if (pc.MaxPlayers == 2)
         {
-            dico1.gameObject.SetActive(true);
-            dico2.gameObject.SetActive(true);
+            if (pc.PlayerCount == 1)
+            {
+                dico1.gameObject.SetActive(true);
+                dico2.gameObject.SetActive(true);
+            }
+            else
+            {
+                dico1.gameObject.SetActive(false);
+                dico2.gameObject.SetActive(false);
+            }
         }
         if (pc.MaxPlayers == 3)
         {
-            dico1.gameObject.SetActive(true);
-            dico2.gameObject.SetActive(true);
-            dico3.gameObject.SetActive(true);
+            if (pc.PlayerCount <= 2)
+            {
+                dico1.gameObject.SetActive(true);
+                dico2.gameObject.SetActive(true);
+                dico3.gameObject.SetActive(true);
+            }
+            else
+            {
+                dico1.gameObject.SetActive(false);
+                dico2.gameObject.SetActive(false);
+                dico3.gameObject.SetActive(false);
+            }
         }
         if (pc.MaxPlayers == 4)
         {
-            dico1.gameObject.SetActive(true);
-            dico2.gameObject.SetActive(true);
-            dico3.gameObject.SetActive(true);
-            dico4.gameObject.SetActive(true);
+            if (pc.PlayerCount <= 3)
+            {
+                dico1.gameObject.SetActive(true);
+                dico2.gameObject.SetActive(true);
+                dico3.gameObject.SetActive(true);
+                dico4.gameObject.SetActive(true);
+            }
+            else
+            {
+                dico1.gameObject.SetActive(false);
+                dico2.gameObject.SetActive(false);
+                dico3.gameObject.SetActive(false);
+                dico4.gameObject.SetActive(false);
+            }
         }
         if (pc.MaxPlayers == 5)
         {
-            dico1.gameObject.SetActive(true);
-            dico2.gameObject.SetActive(true);
-            dico3.gameObject.SetActive(true);
-            dico4.gameObject.SetActive(true);
-            dico5.gameObject.SetActive(true);
+            if (pc.PlayerCount <= 4)
+            {
+                dico1.gameObject.SetActive(true);
+                dico2.gameObject.SetActive(true);
+                dico3.gameObject.SetActive(true);
+                dico4.gameObject.SetActive(true);
+                dico5.gameObject.SetActive(true);
+            }
+            else
+            {
+                dico1.gameObject.SetActive(false);
+                dico2.gameObject.SetActive(false);
+                dico3.gameObject.SetActive(false);
+                dico4.gameObject.SetActive(false);
+                dico5.gameObject.SetActive(false);
+            }
         }
         if (pc.MaxPlayers == 6)
         {
-            dico1.gameObject.SetActive(true);
-            dico2.gameObject.SetActive(true);
-            dico3.gameObject.SetActive(true);
-            dico4.gameObject.SetActive(true);
-            dico5.gameObject.SetActive(true);
-            dico6.gameObject.SetActive(true);
+            if (pc.PlayerCount <= 5)
+            {
+                dico1.gameObject.SetActive(true);
+                dico2.gameObject.SetActive(true);
+                dico3.gameObject.SetActive(true);
+                dico4.gameObject.SetActive(true);
+                dico5.gameObject.SetActive(true);
+                dico6.gameObject.SetActive(true);
+            }
+            else
+            {
+                dico1.gameObject.SetActive(false);
+                dico2.gameObject.SetActive(false);
+                dico3.gameObject.SetActive(false);
+                dico4.gameObject.SetActive(false);
+                dico5.gameObject.SetActive(false);
+                dico6.gameObject.SetActive(false);
+            }
         }
         if (pc.MaxPlayers == 7)
         {
-            dico1.gameObject.SetActive(true);
-            dico2.gameObject.SetActive(true);
-            dico3.gameObject.SetActive(true);
-            dico4.gameObject.SetActive(true);
-            dico5.gameObject.SetActive(true);
-            dico6.gameObject.SetActive(true);
-            dico7.gameObject.SetActive(true);
+            if (pc.PlayerCount <= 6)
+            {
+                dico1.gameObject.SetActive(true);
+                dico2.gameObject.SetActive(true);
+                dico3.gameObject.SetActive(true);
+                dico4.gameObject.SetActive(true);
+                dico5.gameObject.SetActive(true);
+                dico6.gameObject.SetActive(true);
+                dico7.gameObject.SetActive(true);
+            }
+            else
+            {
+                dico1.gameObject.SetActive(false);
+                dico2.gameObject.SetActive(false);
+                dico3.gameObject.SetActive(false);
+                dico4.gameObject.SetActive(false);
+                dico5.gameObject.SetActive(false);
+                dico6.gameObject.SetActive(false);
+                dico7.gameObject.SetActive(false);
+            }
         }
         if (pc.MaxPlayers == 8)
         {
-            dico1.gameObject.SetActive(true);
-            dico2.gameObject.SetActive(true);
-            dico3.gameObject.SetActive(true);
-            dico4.gameObject.SetActive(true);
-            dico5.gameObject.SetActive(true);
-            dico6.gameObject.SetActive(true);
-            dico7.gameObject.SetActive(true);
-            dico8.gameObject.SetActive(true);
+            if (pc.PlayerCount <= 7)
+            {
+                dico1.gameObject.SetActive(true);
+                dico2.gameObject.SetActive(true);
+                dico3.gameObject.SetActive(true);
+                dico4.gameObject.SetActive(true);
+                dico5.gameObject.SetActive(true);
+                dico6.gameObject.SetActive(true);
+                dico7.gameObject.SetActive(true);
+                dico8.gameObject.SetActive(true);
+            }
+            else
+            {
+                dico1.gameObject.SetActive(false);
+                dico2.gameObject.SetActive(false);
+                dico3.gameObject.SetActive(false);
+                dico4.gameObject.SetActive(false);
+                dico5.gameObject.SetActive(false);
+                dico6.gameObject.SetActive(false);
+                dico7.gameObject.SetActive(false);
+                dico8.gameObject.SetActive(false);
+            }
         }
         if (pc.MaxPlayers == 9)
         {
-            dico1.gameObject.SetActive(true);
-            dico2.gameObject.SetActive(true);
-            dico3.gameObject.SetActive(true);
-            dico4.gameObject.SetActive(true);
-            dico5.gameObject.SetActive(true);
-            dico6.gameObject.SetActive(true);
-            dico7.gameObject.SetActive(true);
-            dico8.gameObject.SetActive(true);
-            dico9.gameObject.SetActive(true);
+            if (pc.PlayerCount <= 8)
+            {
+                dico1.gameObject.SetActive(true);
+                dico2.gameObject.SetActive(true);
+                dico3.gameObject.SetActive(true);
+                dico4.gameObject.SetActive(true);
+                dico5.gameObject.SetActive(true);
+                dico6.gameObject.SetActive(true);
+                dico7.gameObject.SetActive(true);
+                dico8.gameObject.SetActive(true);
+                dico9.gameObject.SetActive(true);
+            }
+            else
+            {
+                dico1.gameObject.SetActive(false);
+                dico2.gameObject.SetActive(false);
+                dico3.gameObject.SetActive(false);
+                dico4.gameObject.SetActive(false);
+                dico5.gameObject.SetActive(false);
+                dico6.gameObject.SetActive(false);
+                dico7.gameObject.SetActive(false);
+                dico8.gameObject.SetActive(false);
+                dico9.gameObject.SetActive(false);
+            }
         }
         if (pc.MaxPlayers == 10)
         {
-            dico1.gameObject.SetActive(true);
-            dico2.gameObject.SetActive(true);
-            dico3.gameObject.SetActive(true);
-            dico4.gameObject.SetActive(true);
-            dico5.gameObject.SetActive(true);
-            dico6.gameObject.SetActive(true);
-            dico7.gameObject.SetActive(true);
-            dico8.gameObject.SetActive(true);
-            dico9.gameObject.SetActive(true);
-            dico10.gameObject.SetActive(true);
+            if (pc.PlayerCount <= 9)
+            {
+                dico1.gameObject.SetActive(true);
+                dico2.gameObject.SetActive(true);
+                dico3.gameObject.SetActive(true);
+                dico4.gameObject.SetActive(true);
+                dico5.gameObject.SetActive(true);
+                dico6.gameObject.SetActive(true);
+                dico7.gameObject.SetActive(true);
+                dico8.gameObject.SetActive(true);
+                dico9.gameObject.SetActive(true);
+                dico10.gameObject.SetActive(true);
+            }
+            else
+            {
+                dico1.gameObject.SetActive(false);
+                dico2.gameObject.SetActive(false);
+                dico3.gameObject.SetActive(false);
+                dico4.gameObject.SetActive(false);
+                dico5.gameObject.SetActive(false);
+                dico6.gameObject.SetActive(false);
+                dico7.gameObject.SetActive(false);
+                dico8.gameObject.SetActive(false);
+                dico9.gameObject.SetActive(false);
+                dico10.gameObject.SetActive(false);
+            }
         }
         v.all_player = pc.PlayerCount;
-        matchingnum.text = pc.MaxPlayers + "人中" + pc.PlayerCount + "人が集まりました";
+        matchingnum.text = pc.MaxPlayers + "人中" + v.count + "人が準備完了を押しました";
         photonView.RPC(nameof(room_creator), RpcTarget.MasterClient);
         if (pc.PlayerCount == pc.MaxPlayers && v.count == pc.MaxPlayers)
         {
