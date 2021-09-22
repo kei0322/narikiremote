@@ -81,6 +81,7 @@ public class theme_change : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
+        matchingtext.gameObject.SetActive(true);
         if (pc.PlayerCount == 1)
         {
             ico1.gameObject.SetActive(true);
