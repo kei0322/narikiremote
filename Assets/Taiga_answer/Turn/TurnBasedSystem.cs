@@ -108,6 +108,7 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
         Debug.Log(turn);
         plusturn += 1;// 9/22 服部追記
         Debug.Log("PT++++++++++++++++++++++++++++   Turn:" + plusturn);
+        v.correct_sum = 0;
     }
 
     //今回だと時間制限以外でターンを終わらせたらどうするかを記述
@@ -235,23 +236,27 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
     {
         if (all_correct_rate() >= 100)
         {
-            correct_mes = "名俳優";
+            correct_mes = "名俳優 ";
         }
-        else if (all_correct_rate() >= 60)
+        else if (all_correct_rate() >= 72)
         {
-            correct_mes = "名俳優";
+            correct_mes = "俳優 ";
         }
-        else if (all_correct_rate() >= 30)
+        else if (all_correct_rate() >= 54)
         {
-            correct_mes = "名俳優";
+            correct_mes = "新人俳優 ";
         }
-        else if (all_correct_rate() >= 10)
+        else if (all_correct_rate() >= 36)
         {
-            correct_mes = "名俳優";
+            correct_mes = "見習い ";
+        }
+        else if (all_correct_rate() >= 18)
+        {
+            correct_mes = "演劇部 ";
         }
         else if (all_correct_rate() >= 0)
         {
-            correct_mes = "名俳優";
+            correct_mes = "大根役者 ";
         }
         return correct_mes;
     }
@@ -261,6 +266,7 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
     {
         int warukazu = (v.all_player - 1) * v.all_player;//全員の回答数(一問(v.all_player-1)人分 * v.all_player回繰り返す)
         float num = Mathf.Floor(1.0f * v.correct_sum / warukazu * 100);     //切り捨て
+        
         Debug.Log("正答率" + num + "%");
         return num;
     }
