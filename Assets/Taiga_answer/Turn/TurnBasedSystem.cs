@@ -50,7 +50,7 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
         //迂闊に弄らない方がよさげ
         if (this.TurnText != null)
         {
-            this.TurnText.text = this.turnManager.Turn.ToString() + "回目の挑戦";//何ターン目かを表示してくれる
+            this.TurnText.text = plusturn + "回目の挑戦";//何ターン目かを表示してくれる
         }
         if (this.turnManager.Turn > 0 || this.TimeText != null && !IsShowingResults)//ターンが0以上、TimeTextがnullでない、結果が見えていない場合。
         {
@@ -130,6 +130,9 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
         v.ans_time = 5;
         v.ans_time_flag = false;
 
+        plusturn += 1;// 9/22 服部追記
+        Debug.Log("PT++++++++++++++++++++++++++++");
+
         Debug.Log(turn);//1回目[1]だった
 
         //正解したら
@@ -138,7 +141,8 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
             correct_sum.text = "正解者数は" + v.correct0 + "人!!";
             //追記(9/15)
             v.correct_sum += v.correct0;
-            plusturn += 1;// 9/20 服部追記
+            //plusturn += 1;// 9/20 服部追記
+            //Debug.Log("PT0");
             Debug.Log("正解者数は" + v.correct0 + "人");
         }
         else if (v.answer == 1)
@@ -146,7 +150,8 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
             correct_sum.text = "正解者数は" + v.correct1 + "人!!";
             //追記(9/15)
             v.correct_sum += v.correct1;
-            plusturn += 1;// 9/20 服部追記
+            //plusturn += 1;// 9/20 服部追記
+            //Debug.Log("PT1");
             Debug.Log("正解者数は" + v.correct1 + "人");
         }
         else if (v.answer == 2)
@@ -154,7 +159,8 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
             correct_sum.text = "正解者数は" + v.correct2 + "人!!";
             //追記(9/15)
             v.correct_sum += v.correct2;
-            plusturn += 1;// 9/20 服部追記
+            //plusturn += 1;// 9/20 服部追記
+            //Debug.Log("PT2");
             Debug.Log("正解者数は" + v.correct2 + "人");
         }
     }
@@ -215,9 +221,10 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
         {
             Saishuu_Panel.SetActive(true);
             //追記(9/15)
-            correct_rate.text =  correct_massege() + "級";
+            correct_rate.text = correct_massege() + "級";
 
             plusturn = 1;// 9/20 服部追記
+            Debug.Log("PT_Reset");
             v.count = 0;
             //ok.clk = false;
             Rb.SetActive(true);
@@ -235,7 +242,7 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
         {
             correct_mes = "名俳優";
         }
-        else if (all_correct_rate() >=60)
+        else if (all_correct_rate() >= 60)
         {
             correct_mes = "名俳優";
         }
