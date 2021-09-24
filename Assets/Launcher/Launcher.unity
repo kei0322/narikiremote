@@ -722,7 +722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e367070402bcd0c4681a3a748bc0926f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BGM_lobby: {fileID: 8300000, guid: 7a36675750a9bbc45ab939264efd21dd, type: 3}
+  BGM_lobby: {fileID: 8300000, guid: 1b15c14166714324dbb1441759a881de, type: 3}
   BGM_game: {fileID: 8300000, guid: de64fbae779bacf4a998b25f20a84e3e, type: 3}
   fadepanel: {fileID: 1224135425}
 --- !u!4 &878603012
