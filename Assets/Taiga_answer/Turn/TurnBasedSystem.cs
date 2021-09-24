@@ -37,6 +37,9 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
     private int plusturn = 0;
     public GameObject Rb;//永井：準備完了ボタン
 
+    // 9/24追記(岩下)
+    public GameObject back_timer;
+
     public void Awake()
     {
         this.turnManager = this.gameObject.AddComponent<PunTurnManager>();//PunTurnManagerをコンポーネントに追加
@@ -108,6 +111,8 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
         Debug.Log(turn);
         plusturn += 1;// 9/22 服部追記
         Debug.Log("PT++++++++++++++++++++++++++++   Turn:" + plusturn);
+        back_timer.SetActive(false);
+        back_timer.SetActive(true);
         v.correct_sum = 0;
     }
 
