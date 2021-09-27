@@ -110,7 +110,6 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
         photonView.RPC(nameof(panel_false), RpcTarget.All);
         Debug.Log(turn);
         plusturn += 1;// 9/22 服部追記
-        //Debug.Log("PT++++++++++++++++++++++++++++   Turn:" + plusturn);
         back_timer.SetActive(false);
         back_timer.SetActive(true);
         
