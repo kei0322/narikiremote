@@ -16,6 +16,7 @@ public class Saishuu_panelclose : MonoBehaviour
         Saishuu_Panel.SetActive(false);
         role_change_canvas.gameObject.SetActive(true);
         theme_change_canvas.gameObject.SetActive(true);
+        v.correct_sum = 0;
         v.grade_se_fg = true;
         v.se_timer = 3.5f;
     }

@@ -113,7 +113,7 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
         //Debug.Log("PT++++++++++++++++++++++++++++   Turn:" + plusturn);
         back_timer.SetActive(false);
         back_timer.SetActive(true);
-        v.correct_sum = 0;
+        
     }
 
     //今回だと時間制限以外でターンを終わらせたらどうするかを記述
@@ -271,8 +271,8 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
     {
         int warukazu = (v.all_player - 1) * v.all_player;//全員の回答数(一問(v.all_player-1)人分 * v.all_player回繰り返す)
         float num = Mathf.Floor(1.0f * v.correct_sum / warukazu * 100);     //切り捨て
-        
-        Debug.Log("正答率" + num + "%");
+        Debug.Log("割る数:" + warukazu + "v.correct_sum:"+v.correct_sum);
+        Debug.Log("正答率:" + num + "%");
         return num;
     }
 }
