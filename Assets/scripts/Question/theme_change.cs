@@ -379,7 +379,7 @@ public class theme_change : MonoBehaviourPunCallbacks
                 dico10.gameObject.SetActive(false);
             }
         }
-        if (v.count == 0)
+        if (v.count == 0 && v.count == pc.MaxPlayers)
         {
             sico1.gameObject.SetActive(false);
             sico2.gameObject.SetActive(false);
