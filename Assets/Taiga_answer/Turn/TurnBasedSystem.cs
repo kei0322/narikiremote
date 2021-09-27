@@ -110,7 +110,7 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
         photonView.RPC(nameof(panel_false), RpcTarget.All);
         Debug.Log(turn);
         plusturn += 1;// 9/22 服部追記
-        Debug.Log("PT++++++++++++++++++++++++++++   Turn:" + plusturn);
+        //Debug.Log("PT++++++++++++++++++++++++++++   Turn:" + plusturn);
         back_timer.SetActive(false);
         back_timer.SetActive(true);
         v.correct_sum = 0;
@@ -225,7 +225,7 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
             correct_rate.text = correct_massege() + "級";
 
             plusturn = 0;// 9/20 服部追記
-            Debug.Log("PT_Reset    Turn: "+plusturn);
+            //Debug.Log("PT_Reset    Turn: "+plusturn);
             v.count = 0;
             //ok.clk = false;
             Rb.SetActive(true);
