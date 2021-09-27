@@ -1109,6 +1109,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 652812820}
+        m_MethodName: OnClickPlus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &92846623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1765,8 +1776,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216282077}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.14816, y: -34, z: -11241.387}
-  m_LocalScale: {x: 60, y: 60, z: 60}
+  m_LocalPosition: {x: -28.91, y: -145.35, z: -12469}
+  m_LocalScale: {x: 72.59851, y: 72.59851, z: 72.59851}
   m_Children:
   - {fileID: 1669525574}
   - {fileID: 1720060297}
@@ -1921,8 +1932,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239015184}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.14816, y: -34, z: -11241.387}
-  m_LocalScale: {x: 60, y: 60, z: 60}
+  m_LocalPosition: {x: -28.91, y: -145.35, z: -12469}
+  m_LocalScale: {x: 72.59851, y: 72.59851, z: 72.59851}
   m_Children:
   - {fileID: 719144748}
   - {fileID: 730949049}
@@ -8975,6 +8986,7 @@ GameObject:
   - component: {fileID: 652812817}
   - component: {fileID: 652812819}
   - component: {fileID: 652812818}
+  - component: {fileID: 652812820}
   m_Layer: 5
   m_Name: script
   m_TagString: Untagged
@@ -9071,6 +9083,18 @@ MonoBehaviour:
   viewIdField: 13
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &652812820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652812816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f5720dd167df3b49b6cd00b25e5cc17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &675744883
 GameObject:
   m_ObjectHideFlags: 0
@@ -15282,8 +15306,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828182699}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.14816, y: -34, z: -11241.387}
-  m_LocalScale: {x: 60, y: 60, z: 60}
+  m_LocalPosition: {x: -28.91, y: -145.35, z: -12469}
+  m_LocalScale: {x: 72.59851, y: 72.59851, z: 72.59851}
   m_Children:
   - {fileID: 2038134434}
   - {fileID: 1986543696}
@@ -16299,6 +16323,17 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 8300000, guid: e6871118c3f412c4dba7a4b56f311526,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 652812820}
+        m_MethodName: OnClickPlus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
