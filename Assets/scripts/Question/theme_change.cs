@@ -46,6 +46,17 @@ public class theme_change : MonoBehaviourPunCallbacks
     public GameObject dico9;
     public GameObject dico10;
 
+    public GameObject sico1;
+    public GameObject sico2;
+    public GameObject sico3;
+    public GameObject sico4;
+    public GameObject sico5;
+    public GameObject sico6;
+    public GameObject sico7;
+    public GameObject sico8;
+    public GameObject sico9;
+    public GameObject sico10;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -76,6 +87,17 @@ public class theme_change : MonoBehaviourPunCallbacks
         dico8.gameObject.SetActive(false);
         dico9.gameObject.SetActive(false);
         dico10.gameObject.SetActive(false);
+
+        sico1.gameObject.SetActive(false);
+        sico2.gameObject.SetActive(false);
+        sico3.gameObject.SetActive(false);
+        sico4.gameObject.SetActive(false);
+        sico5.gameObject.SetActive(false);
+        sico6.gameObject.SetActive(false);
+        sico7.gameObject.SetActive(false);
+        sico8.gameObject.SetActive(false);
+        sico9.gameObject.SetActive(false);
+        sico10.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -356,6 +378,104 @@ public class theme_change : MonoBehaviourPunCallbacks
                 dico9.gameObject.SetActive(false);
                 dico10.gameObject.SetActive(false);
             }
+        }
+        if (v.count == 0)
+        {
+            sico1.gameObject.SetActive(false);
+            sico2.gameObject.SetActive(false);
+            sico3.gameObject.SetActive(false);
+            sico4.gameObject.SetActive(false);
+            sico5.gameObject.SetActive(false);
+            sico6.gameObject.SetActive(false);
+            sico7.gameObject.SetActive(false);
+            sico8.gameObject.SetActive(false);
+            sico9.gameObject.SetActive(false);
+            sico10.gameObject.SetActive(false);
+        }
+        if (v.count == 1)
+        {
+            sico1.gameObject.SetActive(true);
+        }
+        if (v.count == 2)
+        {
+            sico1.gameObject.SetActive(true);
+            sico2.gameObject.SetActive(true);
+        }
+        if (v.count == 3)
+        {
+            sico1.gameObject.SetActive(true);
+            sico2.gameObject.SetActive(true);
+            sico3.gameObject.SetActive(true);
+        }
+        if (v.count == 4)
+        {
+            sico1.gameObject.SetActive(true);
+            sico2.gameObject.SetActive(true);
+            sico3.gameObject.SetActive(true);
+            sico4.gameObject.SetActive(true);
+        }
+        if (v.count == 5)
+        {
+            sico1.gameObject.SetActive(true);
+            sico2.gameObject.SetActive(true);
+            sico3.gameObject.SetActive(true);
+            sico4.gameObject.SetActive(true);
+            sico5.gameObject.SetActive(true);
+        }
+        if (v.count == 6)
+        {
+            sico1.gameObject.SetActive(true);
+            sico2.gameObject.SetActive(true);
+            sico3.gameObject.SetActive(true);
+            sico4.gameObject.SetActive(true);
+            sico5.gameObject.SetActive(true);
+            sico6.gameObject.SetActive(true);
+        }
+        if (v.count == 7)
+        {
+            sico1.gameObject.SetActive(true);
+            sico2.gameObject.SetActive(true);
+            sico3.gameObject.SetActive(true);
+            sico4.gameObject.SetActive(true);
+            sico5.gameObject.SetActive(true);
+            sico6.gameObject.SetActive(true);
+            sico7.gameObject.SetActive(true);
+        }
+        if (v.count == 8)
+        {
+            sico1.gameObject.SetActive(true);
+            sico2.gameObject.SetActive(true);
+            sico3.gameObject.SetActive(true);
+            sico4.gameObject.SetActive(true);
+            sico5.gameObject.SetActive(true);
+            sico6.gameObject.SetActive(true);
+            sico7.gameObject.SetActive(true);
+            sico8.gameObject.SetActive(true);
+        }
+        if (v.count == 9)
+        {
+            sico1.gameObject.SetActive(true);
+            sico2.gameObject.SetActive(true);
+            sico3.gameObject.SetActive(true);
+            sico4.gameObject.SetActive(true);
+            sico5.gameObject.SetActive(true);
+            sico6.gameObject.SetActive(true);
+            sico7.gameObject.SetActive(true);
+            sico8.gameObject.SetActive(true);
+            sico9.gameObject.SetActive(true);
+        }
+        if (v.count == 10)
+        {
+            sico1.gameObject.SetActive(true);
+            sico2.gameObject.SetActive(true);
+            sico3.gameObject.SetActive(true);
+            sico4.gameObject.SetActive(true);
+            sico5.gameObject.SetActive(true);
+            sico6.gameObject.SetActive(true);
+            sico7.gameObject.SetActive(true);
+            sico8.gameObject.SetActive(true);
+            sico9.gameObject.SetActive(true);
+            sico10.gameObject.SetActive(true);
         }
         v.all_player = pc.PlayerCount;
         matchingnum.text = pc.MaxPlayers + "人中" + v.count + "人が準備完了を押しました";
