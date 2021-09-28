@@ -250,7 +250,7 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
         else
         {
             role_change_canvas.gameObject.SetActive(true);
-            theme_change_canvas.gameObject.SetActive(true);
+            //theme_change_canvas.gameObject.SetActive(true);
         }
     }
 
