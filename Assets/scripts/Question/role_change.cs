@@ -54,7 +54,15 @@ public class role_change : MonoBehaviourPunCallbacks
         if (pc.PlayerCount == pc.MaxPlayers && !v.start_flag && v.count == pc.MaxPlayers)
         {
             start_cd -= Time.deltaTime;
-            time_text.text = start_cd.ToString("0") + "!";
+            if (start_cd <= 0.5f)
+            {
+                time_text.text = "スタート！";
+            }
+            else
+            {
+                time_text.text = start_cd.ToString("0") + "!";
+            }
+
             if (random_manage)
             {
                 random_manage = false;
