@@ -144,24 +144,42 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
         //正解したら
         if (v.answer == 0)
         {
-            correct_sum.text = "正解者数は" + v.correct0 + "人!!";
+            if(v.correct0 == v.all_player - 1)
+            {
+                correct_sum.text = "全員正解！";
+            }
+            else
+            {
+                correct_sum.text = "正解者数は" + v.correct0 + "人!!";
+            }
             //追記(9/15)
             v.correct_sum += v.correct0;
-            Debug.Log("正解者数は" + v.correct0 + "人");
         }
         else if (v.answer == 1)
         {
-            correct_sum.text = "正解者数は" + v.correct1 + "人!!";
+            if (v.correct1 == v.all_player - 1)
+            {
+                correct_sum.text = "全員正解！";
+            }
+            else
+            {
+                correct_sum.text = "正解者数は" + v.correct1 + "人!!";
+            }
             //追記(9/15)
             v.correct_sum += v.correct1;
-            Debug.Log("正解者数は" + v.correct1 + "人");
         }
         else if (v.answer == 2)
         {
-            correct_sum.text = "正解者数は" + v.correct2 + "人!!";
+            if (v.correct2 == v.all_player - 1)
+            {
+                correct_sum.text = "全員正解！";
+            }
+            else
+            {
+                correct_sum.text = "正解者数は" + v.correct2 + "人!!";
+            }
             //追記(9/15)
             v.correct_sum += v.correct2;
-            Debug.Log("正解者数は" + v.correct2 + "人");
         }
     }
 
