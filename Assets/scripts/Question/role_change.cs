@@ -43,7 +43,7 @@ public class role_change : MonoBehaviourPunCallbacks
         random_manage = true;
         player = PhotonNetwork.LocalPlayer;
         pc = PhotonNetwork.CurrentRoom;
-        start_cd = 5.0f;
+        start_cd = 5.5f;
     }
 
     // Update is called once per frame
@@ -78,7 +78,7 @@ public class role_change : MonoBehaviourPunCallbacks
         else
         {
             random_manage = true;
-            start_cd = 5.0f;
+            start_cd = 5.5f;
         }
 
         if (v.wait_frag == true)

@@ -13,7 +13,7 @@ public class AnswerTimer : MonoBehaviourPunCallbacks
 
     void Start()
     {
-        v.ans_time = 7.0f;//5秒
+        v.ans_time = 5.0f;//5秒
     }
 
     // Update is called once per frame
