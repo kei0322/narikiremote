@@ -504,7 +504,7 @@ public class theme_change : MonoBehaviourPunCallbacks
         Debug.Log("参加者数 : " + pc.PlayerCount + "/最大人数 : " + pc.MaxPlayers);
         Debug.Log("v.allplayer : " + v.all_player);
     }
-
+    
     public void vegetable()
     {
         //v.theme = "greatman";
@@ -534,7 +534,7 @@ public class theme_change : MonoBehaviourPunCallbacks
             photonView.RPC(nameof(erase_panel), RpcTarget.All);
         }
     }
-
+    
     public override void OnJoinedRoom()
     {
         Room myroom = PhotonNetwork.CurrentRoom;　//myroom変数にPhotonnetworkの部屋の現在状況を入れる。
@@ -551,6 +551,7 @@ public class theme_change : MonoBehaviourPunCallbacks
         tb = true;
     }
 
+    
     [PunRPC]
     void erase_panel()
     {
@@ -562,7 +563,7 @@ public class theme_change : MonoBehaviourPunCallbacks
     {
         v.theme = theme;
     }
-
+    
 
 
 
