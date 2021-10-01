@@ -23,7 +23,7 @@ public class GradeObjectSound : MonoBehaviour
         {
             v.grade_se_fg = false;
             audioSource.PlayOneShot(Fanfale);
-            audioSource.volume = 0.5f;
+            audioSource.volume = 0.3f;
         }
     }
 }

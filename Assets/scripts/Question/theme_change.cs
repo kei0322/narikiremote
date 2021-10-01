@@ -17,6 +17,8 @@ public class theme_change : MonoBehaviourPunCallbacks
 
     public GameObject text;
 
+    public GameObject HideImage;
+
     private bool tb;
     private int pn;
     private Room pc;
@@ -494,7 +496,11 @@ public class theme_change : MonoBehaviourPunCallbacks
                 text.gameObject.SetActive(true);
                 theme_button.gameObject.SetActive(false);
             }
-            if (v.ep) theme_canvas.gameObject.SetActive(false);
+            if (v.ep)
+            {
+                theme_canvas.gameObject.SetActive(false);
+                Invoke("HideImageClose", 0.5f);
+            }
             int theme_rnd = (int)Random.Range(0.0f, 3.0f);//カテゴリーをランダム
             if (theme_rnd == 0) vegetable();
             if (theme_rnd == 1) animal();
@@ -505,6 +511,10 @@ public class theme_change : MonoBehaviourPunCallbacks
         Debug.Log("v.allplayer : " + v.all_player);
     }
     
+    void HideImageClose()
+    {
+        HideImage.SetActive(false);
+    }
     public void vegetable()
     {
         //v.theme = "greatman";

@@ -27,6 +27,7 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
     public GameObject respondent_canvas;
     public GameObject turn_panel;
     public GameObject Saishuu_Panel;
+    public GameObject HideImage;
 
     private PunTurnManager turnManager;
 
@@ -250,7 +251,8 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
         else
         {
             role_change_canvas.gameObject.SetActive(true);
-            //theme_change_canvas.gameObject.SetActive(true);
+            HideImage.gameObject.SetActive(true);
+            theme_change_canvas.gameObject.SetActive(true);
         }
     }
 
