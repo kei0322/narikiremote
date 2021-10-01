@@ -213,15 +213,16 @@ public class role_change : MonoBehaviourPunCallbacks
         if (player.ActorNumber == randomX)
         {
             questoner();
-            role_text.text = "あなたは【出題者】です";
+            role_text.text = "【出題者】";
             Debug.Log("あなたは出題者です");
         }
         else
         {
             respondent();
-            role_text.text = "あなたは【回答者】です";
+            role_text.text = "【回答者】";
             Debug.Log("あなたは回答者です");
         }
         Debug.Log("乱数 : " + randomX + "  PlayerID : " + player.ActorNumber);
     }
+
 }
