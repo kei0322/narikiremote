@@ -23,6 +23,7 @@ public class ok : MonoBehaviourPunCallbacks
             photonView.RPC("DebugNum", RpcTarget.AllBuffered, v.count);
             ReadyB.SetActive(false);
         //}
+        v.QuestionerActorTurn = 0;//岩下追記(10/12)
     }
 
 
