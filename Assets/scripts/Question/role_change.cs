@@ -27,7 +27,6 @@ public class role_change : MonoBehaviourPunCallbacks
     button reset;
 
     //9/12追記(岩下)
-    private int role_random;
     private bool random_manage;
     private Player player;
     private Room pc;
@@ -69,8 +68,8 @@ public class role_change : MonoBehaviourPunCallbacks
                 //マスターの変数を全員で共有する方法
                 if (PhotonNetwork.IsMasterClient)
                 {
-                    role_random = Random.Range(1, pc.MaxPlayers);
-                    photonView.RPC(nameof(RoleRandom), RpcTarget.All, role_random);
+                    v.QuestionerActorTurn++;
+                    photonView.RPC(nameof(QuestionTurn), RpcTarget.All, v.QuestionerActorTurn);
                 }
             }
             if (start_cd <= 0) v.wait_frag = true;
@@ -208,9 +207,9 @@ public class role_change : MonoBehaviourPunCallbacks
     //9/14追記(岩下)
     //ランダムに一人出題者を選ぶ
     [PunRPC]
-    void RoleRandom(int randomX)
+    void QuestionTurn(int QuestionerX)
     {
-        if (player.ActorNumber == randomX)
+        if (player.ActorNumber == QuestionerX)
         {
             questoner();
             role_text.text = "【出題者】";
@@ -222,7 +221,7 @@ public class role_change : MonoBehaviourPunCallbacks
             role_text.text = "【回答者】";
             Debug.Log("あなたは回答者です");
         }
-        Debug.Log("乱数 : " + randomX + "  PlayerID : " + player.ActorNumber);
+        Debug.Log("順番 : " + QuestionerX + "  PlayerID : " + player.ActorNumber);
     }
 
 }

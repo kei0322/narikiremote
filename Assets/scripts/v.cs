@@ -39,6 +39,10 @@ public class v : MonoBehaviour
     //追記(9/20)
     public static bool grade_se_fg;//最終結果のse繰り返すよう
     public static float se_timer;
+
+    //追記(10/12)
+    public static int QuestionerActorTurn;//アクターナンバーとこいつが一致してるかどうかで出題者が変わる
+
     //永井が作ったよ
     public static int count = 0;//準備完了のカウント数
 }
