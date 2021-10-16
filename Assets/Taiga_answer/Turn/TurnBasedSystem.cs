@@ -243,9 +243,9 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
             correct_rate.text = correct_massege() + "級";
 
             plusturn = 0;// 9/20 服部追記
-            //Debug.Log("PT_Reset    Turn: "+plusturn);
+                         //Debug.Log("PT_Reset    Turn: "+plusturn);
+                         //ok.clk = false;
             v.count = 0;
-            //ok.clk = false;
             Rb.SetActive(true);
         }
         else
