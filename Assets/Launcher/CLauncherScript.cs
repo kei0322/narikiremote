@@ -34,6 +34,11 @@ public class CLauncherScript : MonoBehaviourPunCallbacks
     }
     #endregion
 
+    public void EndGame()
+    {
+        Invoke("Quit", 0.3f);
+    }
+
     void OnGUI()
     {
         //ログインの状態を画面上に出力
@@ -43,5 +48,14 @@ public class CLauncherScript : MonoBehaviourPunCallbacks
     void ToLobby()
     {
         SceneManager.LoadScene("Lobby");
+    }
+
+    public void Quit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+		Application.Quit();
+#endif
     }
 }
