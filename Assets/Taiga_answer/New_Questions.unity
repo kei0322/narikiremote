@@ -2753,7 +2753,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u3042\u306A\u305F\u306F\u3000\u3000\u3000\u3000\u3000\u3000\u3067\u3059"
+  m_Text: "\u51FA\u984C\u8005\u306F\u3000\u3000\u3000\u3000\u3000\u3000\u3067\u3059\uFF01"
 --- !u!222 &395174861
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3109,7 +3109,7 @@ GameObject:
   - component: {fileID: 428722567}
   - component: {fileID: 428722566}
   m_Layer: 5
-  m_Name: RoleText
+  m_Name: NameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9706,7 +9706,7 @@ MonoBehaviour:
   timer: {fileID: 1970273497}
   scripts: {fileID: 675744883}
   time_text: {fileID: 146745452}
-  role_text: {fileID: 428722566}
+  _nameLabel: {fileID: 428722566}
 --- !u!114 &738483070
 MonoBehaviour:
   m_ObjectHideFlags: 0

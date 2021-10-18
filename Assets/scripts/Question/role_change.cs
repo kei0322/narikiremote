@@ -32,7 +32,8 @@ public class role_change : MonoBehaviourPunCallbacks
     private Room pc;
     private float start_cd;
     public Text time_text;//残り時間
-    public Text role_text;//役割を教える
+    [SerializeField]
+    private Text _nameLabel;//名前
     // Start is called before the first frame update
     void Awake()
     {
@@ -42,6 +43,7 @@ public class role_change : MonoBehaviourPunCallbacks
         random_manage = true;
         player = PhotonNetwork.LocalPlayer;
         pc = PhotonNetwork.CurrentRoom;
+        _nameLabel.text = "";
         start_cd = 5.5f;
     }
 
@@ -205,23 +207,29 @@ public class role_change : MonoBehaviourPunCallbacks
     }
 
     //9/14追記(岩下)
-    //ランダムに一人出題者を選ぶ
+    //順番に一人出題者を選ぶ
     [PunRPC]
     void QuestionTurn(int QuestionerX)
     {
         if (player.ActorNumber == QuestionerX)
         {
             questoner();
-            role_text.text = "【出題者】";
+            //名前
+            _nameLabel.text = player.NickName + "さん";
+            photonView.RPC(nameof(QuestionName), RpcTarget.Others , _nameLabel.text);
             Debug.Log("あなたは出題者です");
         }
         else
         {
             respondent();
-            role_text.text = "【回答者】";
             Debug.Log("あなたは回答者です");
         }
         Debug.Log("順番 : " + QuestionerX + "  PlayerID : " + player.ActorNumber);
     }
 
+    [PunRPC]
+    void QuestionName(string nameLabel)
+    {
+        _nameLabel.text = nameLabel;
+    }
 }
