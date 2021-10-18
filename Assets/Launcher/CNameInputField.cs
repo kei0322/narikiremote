@@ -29,7 +29,7 @@ public class CNameInputField : MonoBehaviourPunCallbacks
     #region Public Method
     public void SetPlayerName()
     {
-        PhotonNetwork.NickName = _inputField.text + " ";     //今回ゲームで利用するプレイヤーの名前を設定
+        PhotonNetwork.NickName = _inputField.text;     //今回ゲームで利用するプレイヤーの名前を設定
         PlayerPrefs.SetString(playerNamePrefKey, _inputField.text);    //今回の名前をセーブ
         Debug.Log(PhotonNetwork.NickName);   //playerの名前の確認。（動作が確認できればこの行は消してもいい）
     }
