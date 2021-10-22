@@ -19,5 +19,6 @@ public class Saishuu_panelclose : MonoBehaviour
         v.correct_sum = 0;//9/27
         v.grade_se_fg = true;
         v.se_timer = 3.5f;
+        v.start_flag = true;
     }
 }

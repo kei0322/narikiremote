@@ -514,6 +514,7 @@ public class theme_change : MonoBehaviourPunCallbacks
     void HideImageClose()
     {
         HideImage.SetActive(false);
+        v.start_flag = false;
     }
     public void vegetable()
     {
