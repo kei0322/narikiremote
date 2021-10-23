@@ -45,6 +45,7 @@ public class v : MonoBehaviour
 
     //永井が作ったよ
     public static int count = 0;//準備完了のカウント数
+    public static int countt = 0;//準備完了のカウント数2
     //服部
     public static int OnOff = 0;
 }

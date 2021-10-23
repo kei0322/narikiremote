@@ -8,6 +8,7 @@ public class Rzero : MonoBehaviour
     public void OnClickPlus()
     {
         v.count = 0;
+        v.countt = 0;
         Rb.SetActive(true);
     }
 }
