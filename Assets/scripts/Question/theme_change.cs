@@ -23,6 +23,33 @@ public class theme_change : MonoBehaviourPunCallbacks
     private int pn;
     private Room pc;
 
+    private Player pl;
+    int[] cot = new int[10];
+
+    void Awake()
+    {
+        //playerはローカルプレイヤー(ルームにいる参加者全員)を参照
+        pl = PhotonNetwork.LocalPlayer;
+    }
+    public void OnClickPlus()
+    {
+        //          実行するメソッド名     対象           引数
+        photonView.RPC("DebugNum", RpcTarget.AllBuffered, pl.ActorNumber);
+
+    }
+
+    [PunRPC]
+    void DebugNum(int play)
+    {
+        cot[play] = 1;
+        for (int i = 0; i < 10; i++)
+        {
+            v.countt = cot[i] + v.countt;
+        }
+        v.count = v.countt;
+        Debug.Log("play" + play);
+    }
+
     public GameObject matchingtext;
     public Text matchingnum;
 
@@ -105,6 +132,11 @@ public class theme_change : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
+        for (int i = 0; i < 10; i++)
+        {
+            cot[i] = 0;
+        }
+
         matchingtext.gameObject.SetActive(true);
         if (pc.PlayerCount == 1)
         {

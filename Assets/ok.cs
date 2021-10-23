@@ -17,10 +17,12 @@ public class ok : MonoBehaviourPunCallbacks
         //if (!clk)
         //{
            // clk = true;
+           /*
             v.count++;
             Debug.Log("v.count : " + v.count);
             //          実行するメソッド名     対象           引数
             photonView.RPC("DebugNum", RpcTarget.AllBuffered, v.count);
+           */
             ReadyB.SetActive(false);
         //}
         v.QuestionerActorTurn = 0;//岩下追記(10/12)

@@ -246,6 +246,7 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
                          //Debug.Log("PT_Reset    Turn: "+plusturn);
                          //ok.clk = false;
             v.count = 0;
+            v.countt = 0;
             Rb.SetActive(true);
         }
         else
