@@ -34,6 +34,9 @@ public class role_change : MonoBehaviourPunCallbacks
     public Text time_text;//残り時間
     [SerializeField]
     private Text _nameLabel;//名前
+    [SerializeField]
+    private GameObject _countTimer;//タイマーカウントのGameObject
+    private RectTransform _rectTransform;
     // Start is called before the first frame update
     void Awake()
     {
@@ -44,7 +47,9 @@ public class role_change : MonoBehaviourPunCallbacks
         player = PhotonNetwork.LocalPlayer;
         pc = PhotonNetwork.CurrentRoom;
         _nameLabel.text = "";
-        start_cd = 5.5f;
+        start_cd = 9.5f;
+
+        _rectTransform = _countTimer.gameObject.GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
@@ -57,10 +62,15 @@ public class role_change : MonoBehaviourPunCallbacks
             start_cd -= Time.deltaTime;
             if (start_cd <= 0.5f)
             {
+                _rectTransform.anchoredPosition = new Vector2(0, 0);
                 time_text.text = "スタート！";
+            }else if (start_cd >= 3.5)
+            {
+                time_text.text = "";
             }
             else
             {
+                _rectTransform.anchoredPosition = new Vector2(0, -200);
                 time_text.text = start_cd.ToString("0") + "!";
             }
 
@@ -79,7 +89,7 @@ public class role_change : MonoBehaviourPunCallbacks
         else
         {
             random_manage = true;
-            start_cd = 5.5f;
+            start_cd = 9.5f;
         }
 
         if (v.wait_frag == true)
