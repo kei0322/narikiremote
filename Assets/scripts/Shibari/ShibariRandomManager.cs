@@ -51,7 +51,7 @@ public class ShibariRandomManager : MonoBehaviourPunCallbacks
             }
             RespondentTextBox.text = ShibariWord[x]; //テキストの上書き
             QuestionerTextBox.text = ShibariWord[x]; //テキストの上書き
-            TaikiTextBox.text = "出題者は" + ShibariWord[x];
+            TaikiTextBox.text = ShibariWord[x];
         }
         else
         {
