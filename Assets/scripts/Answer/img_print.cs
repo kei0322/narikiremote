@@ -38,6 +38,12 @@ public class img_print : MonoBehaviourPunCallbacks
 
     private void ve_image_switch()
     {
+        for (int i = 0; i < 22; i++)
+        {
+            img.sprite = Resources.Load<Sprite>(v.ve_pass[v.choices[v.answer]]);
+        }
+        #region 旧コード
+        /*
         switch (v.choices[v.answer])
         {
             case 0:
@@ -76,11 +82,19 @@ public class img_print : MonoBehaviourPunCallbacks
             default:
                 break;
         }
+        */
+        #endregion
 
     }
 
     private void an_image_switch()
     {
+        for (int i = 0; i < 22; i++)
+        {
+            img.sprite = Resources.Load<Sprite>(v.an_pass[v.choices[v.answer]]);
+        }
+        #region 旧コード
+        /*
         switch (v.choices[v.answer])
         {
             case 0:
@@ -113,11 +127,19 @@ public class img_print : MonoBehaviourPunCallbacks
             default:
                 break;
         }
+        */
+        #endregion
 
     }
 
     private void sp_image_switch()
     {
+        for (int i = 0; i < 22; i++)
+        {
+            img.sprite = Resources.Load<Sprite>(v.sp_pass[v.choices[v.answer]]);
+        }
+        #region 旧コード
+        /*
         switch (v.choices[v.answer])
         {
             case 0:
@@ -150,7 +172,8 @@ public class img_print : MonoBehaviourPunCallbacks
             default:
                 break;
         }
-
+        */
+        #endregion
     }
 
 

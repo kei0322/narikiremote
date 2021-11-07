@@ -45,6 +45,14 @@ public class respondent : MonoBehaviourPunCallbacks
 
     private void ve_image_switch()
     {
+        for (int i = 0; i < 22; i++)
+        {
+            img0.sprite = Resources.Load<Sprite>(v.ve_pass[v.choices[0]]);
+            img1.sprite = Resources.Load<Sprite>(v.ve_pass[v.choices[1]]);
+            img2.sprite = Resources.Load<Sprite>(v.ve_pass[v.choices[2]]);
+        }
+        #region 旧コード
+        /*
         switch (v.choices[0])
         {
             case 0:
@@ -159,11 +167,21 @@ public class respondent : MonoBehaviourPunCallbacks
             default:
                 break;
         }
+        */
+        #endregion
 
     }
 
     private void an_image_switch()
     {
+        for (int i = 0; i < 22; i++)
+        {
+            img0.sprite = Resources.Load<Sprite>(v.an_pass[v.choices[0]]);
+            img1.sprite = Resources.Load<Sprite>(v.an_pass[v.choices[1]]);
+            img2.sprite = Resources.Load<Sprite>(v.an_pass[v.choices[2]]);
+        }
+        #region 旧コード
+        /*
         switch (v.choices[0])
         {
             case 0:
@@ -260,11 +278,20 @@ public class respondent : MonoBehaviourPunCallbacks
             default:
                 break;
         }
-
+        */
+        #endregion
     }
 
     private void sp_image_switch()
     {
+        for (int i = 0; i < 22; i++)
+        {
+            img0.sprite = Resources.Load<Sprite>(v.sp_pass[v.choices[0]]);
+            img1.sprite = Resources.Load<Sprite>(v.sp_pass[v.choices[1]]);
+            img2.sprite = Resources.Load<Sprite>(v.sp_pass[v.choices[2]]);
+        }
+        #region 旧コード
+        /*
         switch (v.choices[0])
         {
             case 0:
@@ -361,6 +388,8 @@ public class respondent : MonoBehaviourPunCallbacks
             default:
                 break;
         }
+        */
+        #endregion
 
     }
 

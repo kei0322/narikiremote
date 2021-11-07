@@ -45,6 +45,12 @@ public class questoner : MonoBehaviourPunCallbacks
 
     private void ve_image_switch()//野菜
     {
+        for (int i = 0; i < 22; i++)
+        {
+            img.sprite = Resources.Load<Sprite>(v.ve_pass[v.choices[v.answer]]); name.GetComponent<Text>().text = v.ve_name[v.choices[v.answer]];
+        }
+        #region 旧コード
+        /*
         switch (v.choices[v.answer])
         {
             case 0:
@@ -83,11 +89,18 @@ public class questoner : MonoBehaviourPunCallbacks
             default:
                 break;
         }
-
+        */
+        #endregion
     }
 
     private void an_image_switch()
     {
+        for (int i = 0; i < 22; i++)
+        {
+            img.sprite = Resources.Load<Sprite>(v.an_pass[v.choices[v.answer]]); name.GetComponent<Text>().text = v.an_name[v.choices[v.answer]];
+        }
+        #region 旧コード
+        /*
         switch (v.choices[v.answer])
         {
             case 0:
@@ -117,14 +130,61 @@ public class questoner : MonoBehaviourPunCallbacks
             case 8:
                 img.sprite = Resources.Load<Sprite>("images/animal/nezumi"); name.GetComponent<Text>().text = "ネズミ";
                 break;
+
+            case 9:
+                img.sprite = Resources.Load<Sprite>("images/animal/elephant"); name.GetComponent<Text>().text = "ゾウ";
+                break;
+            case 10:
+                img.sprite = Resources.Load<Sprite>("images/animal/giraffe"); name.GetComponent<Text>().text = "キリン";
+                break;
+            case 11:
+                img.sprite = Resources.Load<Sprite>("images/animal/horse"); name.GetComponent<Text>().text = "ウマ";
+                break;
+            case 12:
+                img.sprite = Resources.Load<Sprite>("images/animal/deer"); name.GetComponent<Text>().text = "シカ";
+                break;
+            case 13:
+                img.sprite = Resources.Load<Sprite>("images/animal/reindeer"); name.GetComponent<Text>().text = "トナカイ";
+                break;
+            case 14:
+                img.sprite = Resources.Load<Sprite>("images/animal/dolphin"); name.GetComponent<Text>().text = "イルカ";
+                break;
+            case 15:
+                img.sprite = Resources.Load<Sprite>("images/animal/whale"); name.GetComponent<Text>().text = "クジラ";
+                break;
+            case 16:
+                img.sprite = Resources.Load<Sprite>("images/animal/bear"); name.GetComponent<Text>().text = "クマ";
+                break;
+            case 17:
+                img.sprite = Resources.Load<Sprite>("images/animal/panda"); name.GetComponent<Text>().text = "パンダ";
+                break;
+            case 18:
+                img.sprite = Resources.Load<Sprite>("images/animal/gorilla"); name.GetComponent<Text>().text = "ゴリラ";
+                break;
+            case 19:
+                img.sprite = Resources.Load<Sprite>("images/animal/hippopotamus"); name.GetComponent<Text>().text = "カバ";
+                break;
+            case 20:
+                img.sprite = Resources.Load<Sprite>("images/animal/goat"); name.GetComponent<Text>().text = "ヤギ";
+                break;
+            case 21:
+                img.sprite = Resources.Load<Sprite>("images/animal/orca"); name.GetComponent<Text>().text = "シャチ";
+                break;
             default:
                 break;
         }
-
+        */
+        #endregion
     }
 
     private void sp_image_switch()
     {
+        for (int i = 0; i < 22; i++)
+        {
+            img.sprite = Resources.Load<Sprite>(v.sp_pass[v.choices[v.answer]]); name.GetComponent<Text>().text = v.sp_name[v.choices[v.answer]];
+        }
+        #region 旧コード
+        /*
         switch (v.choices[v.answer])
         {
             case 0:
@@ -154,9 +214,52 @@ public class questoner : MonoBehaviourPunCallbacks
             case 8:
                 img.sprite = Resources.Load<Sprite>("images/sports/batominntonn"); name.GetComponent<Text>().text = "バドミントン";
                 break;
+
+            case 9:
+                img.sprite = Resources.Load<Sprite>("images/sports/golf"); name.GetComponent<Text>().text = "ゴルフ";
+                break;
+            case 10:
+                img.sprite = Resources.Load<Sprite>("images/sports/billiards"); name.GetComponent<Text>().text = "ビリヤード";
+                break;
+            case 11:
+                img.sprite = Resources.Load<Sprite>("images/sports/archery"); name.GetComponent<Text>().text = "アーチェリー";
+                break;
+            case 12:
+                img.sprite = Resources.Load<Sprite>("images/sports/sumou"); name.GetComponent<Text>().text = "相撲";
+                break;
+            case 13:
+                img.sprite = Resources.Load<Sprite>("images/sports/jyuudou"); name.GetComponent<Text>().text = "柔道";
+                break;
+            case 14:
+                img.sprite = Resources.Load<Sprite>("images/sports/handball"); name.GetComponent<Text>().text = "ハンドボール";
+                break;
+            case 15:
+                img.sprite = Resources.Load<Sprite>("images/sports/relay"); name.GetComponent<Text>().text = "リレー";
+                break;
+            case 16:
+                img.sprite = Resources.Load<Sprite>("images/sports/boutakatobi"); name.GetComponent<Text>().text = "棒高跳び";
+                break;
+            case 17:
+                img.sprite = Resources.Load<Sprite>("images/sports/swimming"); name.GetComponent<Text>().text = "水泳";
+                break;
+            case 18:
+                img.sprite = Resources.Load<Sprite>("images/sports/hougannnage"); name.GetComponent<Text>().text = "砲丸投げ";
+                break;
+            case 19:
+                img.sprite = Resources.Load<Sprite>("images/sports/hannma-nage"); name.GetComponent<Text>().text = "ハンマー投げ";
+                break;
+            case 20:
+                img.sprite = Resources.Load<Sprite>("images/sports/gateball"); name.GetComponent<Text>().text = "ゲートボール";
+                break;
+            case 21:
+                img.sprite = Resources.Load<Sprite>("images/sports/boxing"); name.GetComponent<Text>().text = "ボクシング";
+                break;
+
             default:
                 break;
         }
+        */
+        #endregion
 
     }
 

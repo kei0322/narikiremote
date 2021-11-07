@@ -124,7 +124,7 @@ public class role_change : MonoBehaviourPunCallbacks
             {
                 for (int i = 0; i < 3; i++)
                 {
-                    int r = (int)Random.Range(0.0f, 8.0f);
+                    int r = (int)Random.Range(0.0f, 22.0f);
                     cho[i] = r;//いっぱいの中からクイズのセットを選ぶ
                 }
             } while (cho[0] == cho[1] || cho[1] == cho[2] || cho[0] == cho[2]);
@@ -138,7 +138,7 @@ public class role_change : MonoBehaviourPunCallbacks
             {
                 for (int i = 0; i < 3; i++)
                 {
-                    int r = (int)Random.Range(0.0f, 8.0f);
+                    int r = (int)Random.Range(0.0f, 22.0f);
                     cho[i] = r;//いっぱいの中からクイズのセットを選ぶ
                 }
             } while (cho[0] == cho[1] || cho[1] == cho[2] || cho[0] == cho[2]);
@@ -149,7 +149,7 @@ public class role_change : MonoBehaviourPunCallbacks
             {
                 for (int i = 0; i < 3; i++)
                 {
-                    int r = (int)Random.Range(0.0f, 8.0f);
+                    int r = (int)Random.Range(0.0f, 22.0f);
                     cho[i] = r;//いっぱいの中からクイズのセットを選ぶ
                 }
             } while (cho[0] == cho[1] || cho[1] == cho[2] || cho[0] == cho[2]);

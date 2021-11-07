@@ -13,6 +13,169 @@ public class v : MonoBehaviour
     public static int[] choices = new int[3];// = 0;
     public static bool ttf = false;
     public static int answer = 0;
+    
+    #region 野菜_名前
+    public static string[] ve_name = {
+        "ブロッコリー",
+        "ピーマン",
+        "きゅうり",
+        "きゃべつ",
+        "レタス",
+        "白菜",
+        "トマト",
+        "じゃがいも",
+        "パプリカ",
+        "小松菜",
+        "セロリ",
+        "スイカ",
+        "カブ",
+        "ニンジン",
+        "ダイコン",
+        "サツマイモ",
+        "枝豆",
+        "そら豆",
+        "トウモロコシ",
+        "レンコン",
+        "カボチャ",
+        "メロン",
+        "タマネギ"
+    };
+    #endregion
+    #region 野菜_ファイルパス
+    public static string[] ve_pass = {
+        "images/vegetable/burokkori-",
+        "images/vegetable/pi-mnn",
+        "images/vegetable/kyu-ri",
+        "images/vegetable/kyabetu",
+        "images/vegetable/retasu",
+        "images/vegetable/hakusai",
+        "images/vegetable/tomato",
+        "images/vegetable/jagaimo",
+        "images/vegetable/papurika",
+        "images/vegetable/komatuna",
+        "images/vegetable/serori-",
+        "images/vegetable/watermelon",
+        "images/vegetable/turnip",
+        "images/vegetable/carrot",
+        "images/vegetable/radish",
+        "images/vegetable/sweetpotato",
+        "images/vegetable/greensoybeans",
+        "images/vegetable/broadbeans",
+        "images/vegetable/corn",
+        "images/vegetable/lotusroot",
+        "images/vegetable/pumpkin",
+        "images/vegetable/melon",
+        "images/vegetable/onion"
+    };
+    #endregion
+    #region 動物_名前
+    public static string[] an_name = {
+        "トラ",
+        "ライオン",
+        "チーター",
+        "牛",
+        "にわとり",
+        "豚",
+        "きつね",
+        "たぬき",
+        "ネズミ",
+        "ゾウ",
+        "キリン",
+        "ウマ",
+        "シカ",
+        "トナカイ",
+        "イルカ",
+        "クジラ",
+        "クマ",
+        "パンダ",
+        "ゴリラ",
+        "カバ",
+        "ヤギ",
+        "シャチ",
+        "サル"
+    };
+    #endregion
+    #region 動物_ファイルパス
+    public static string[] an_pass = {
+        "images/animal/tora",
+        "images/animal/raionn",
+        "images/animal/ti-ta-",
+        "images/animal/usi",
+        "images/animal/niwatori",
+        "images/animal/buta",
+        "images/animal/kitune",
+        "images/animal/tanuki",
+        "images/animal/nezumi",
+        "images/animal/elephant",
+        "images/animal/giraffe",
+        "images/animal/horse",
+        "images/animal/deer",
+        "images/animal/reindeer",
+        "images/animal/dolphin",
+        "images/animal/whale",
+        "images/animal/bear",
+        "images/animal/panda",
+        "images/animal/gorilla",
+        "images/animal/hippopotamus",
+        "images/animal/goat",
+        "images/animal/orca",
+        "images/animal/monkey"
+    };
+    #endregion
+    #region スポーツ_名前
+    public static string[] sp_name = {
+        "野球",
+        "サッカー",
+        "剣道",
+        "バレー",
+        "バスケ",
+        "ラグビー",
+        "卓球",
+        "テニス",
+        "バドミントン",
+        "ゴルフ",
+        "フェンシング",
+        "ビリヤード",
+        "アーチェリー",
+        "相撲",
+        "柔道",
+        "ハンドボール",
+        "リレー",
+        "棒高跳び",
+        "水泳",
+        "砲丸投げ",
+        "ハンマー投げ",
+        "ゲートボール",
+        "ボクシング"
+    };
+    #endregion
+    #region スポーツ_ファイルパス
+    public static string[] sp_pass = {
+        "images/sports/yakyuu",
+        "images/sports/sakka-",
+        "images/sports/kenndou",
+        "images/sports/bare-",
+        "images/sports/basuke",
+        "images/sports/ragubi-",
+        "images/sports/takkyuu",
+        "images/sports/tenisu",
+        "images/sports/batominntonn",
+        "images/sports/golf",
+        "images/sports/fencing",
+        "images/sports/billiards",
+        "images/sports/archery",
+        "images/sports/sumou",
+        "images/sports/jyuudou",
+        "images/sports/handball",
+        "images/sports/relay",
+        "images/sports/boutakatobi",
+        "images/sports/swimming",
+        "images/sports/hougannnage",
+        "images/sports/hannma-nage",
+        "images/sports/gateball",
+        "images/sports/boxing"
+    };
+    #endregion
 
 
     //岩下が作った共通変数

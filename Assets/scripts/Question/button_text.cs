@@ -24,6 +24,14 @@ public class button_text : MonoBehaviour
 
     private void ve_image_switch()
     {
+        for (int i = 0; i < 22; i++)
+        {
+            bt0.GetComponent<Text>().text = v.ve_name[v.choices[0]];
+            bt1.GetComponent<Text>().text = v.ve_name[v.choices[1]];
+            bt2.GetComponent<Text>().text = v.ve_name[v.choices[2]];
+        }
+        #region 旧コード
+        /*
         switch (v.choices[0])
         {
             case 0:
@@ -58,6 +66,40 @@ public class button_text : MonoBehaviour
                 break;
             case 10:
                 bt0.GetComponent<Text>().text = "セロリ";
+                break;
+
+            case 11:
+                bt0.GetComponent<Text>().text = "ウマ";
+                break;
+            case 12:
+                bt0.GetComponent<Text>().text = "シカ";
+                break;
+            case 13:
+                bt0.GetComponent<Text>().text = "トナカイ";
+                break;
+            case 14:
+                bt0.GetComponent<Text>().text = "イルカ";
+                break;
+            case 15:
+                bt0.GetComponent<Text>().text = "クジラ";
+                break;
+            case 16:
+                bt0.GetComponent<Text>().text = "クマ";
+                break;
+            case 17:
+                bt0.GetComponent<Text>().text = "パンダ";
+                break;
+            case 18:
+                bt0.GetComponent<Text>().text = "ゴリラ";
+                break;
+            case 19:
+                bt0.GetComponent<Text>().text = "カバ";
+                break;
+            case 20:
+                bt0.GetComponent<Text>().text = "ヤギ";
+                break;
+            case 21:
+                bt0.GetComponent<Text>().text = "シャチ";
                 break;
 
             default:
@@ -146,11 +188,21 @@ public class button_text : MonoBehaviour
                 break;
 
         }
+        */
+        #endregion
 
     }
 
     private void an_image_switch()
     {
+        for (int i = 0; i < 22; i++)
+        {
+            bt0.GetComponent<Text>().text = v.an_name[v.choices[0]];
+            bt1.GetComponent<Text>().text = v.an_name[v.choices[1]];
+            bt2.GetComponent<Text>().text = v.an_name[v.choices[2]];
+        }
+        #region 旧コード
+        /*
         switch (v.choices[0])
         {
             case 0:
@@ -179,6 +231,46 @@ public class button_text : MonoBehaviour
                 break;
             case 8:
                 bt0.GetComponent<Text>().text = "ネズミ";
+                break;
+
+            case 9:
+                bt0.GetComponent<Text>().text = "ゾウ";
+                break;
+            case 10:
+                bt0.GetComponent<Text>().text = "キリン";
+                break;
+            case 11:
+                bt0.GetComponent<Text>().text = "ウマ";
+                break;
+            case 12:
+                bt0.GetComponent<Text>().text = "シカ";
+                break;
+            case 13:
+                bt0.GetComponent<Text>().text = "トナカイ";
+                break;
+            case 14:
+                bt0.GetComponent<Text>().text = "イルカ";
+                break;
+            case 15:
+                bt0.GetComponent<Text>().text = "クジラ";
+                break;
+            case 16:
+                bt0.GetComponent<Text>().text = "クマ";
+                break;
+            case 17:
+                bt0.GetComponent<Text>().text = "パンダ";
+                break;
+            case 18:
+                bt0.GetComponent<Text>().text = "ゴリラ";
+                break;
+            case 19:
+                bt0.GetComponent<Text>().text = "カバ";
+                break;
+            case 20:
+                bt0.GetComponent<Text>().text = "ヤギ";
+                break;
+            case 21:
+                bt0.GetComponent<Text>().text = "シャチ";
                 break;
 
             default:
@@ -216,6 +308,46 @@ public class button_text : MonoBehaviour
                 bt1.GetComponent<Text>().text = "ネズミ";
                 break;
 
+            case 9:
+                bt1.GetComponent<Text>().text = "ゾウ";
+                break;
+            case 10:
+                bt1.GetComponent<Text>().text = "キリン";
+                break;
+            case 11:
+                bt1.GetComponent<Text>().text = "ウマ";
+                break;
+            case 12:
+                bt1.GetComponent<Text>().text = "シカ";
+                break;
+            case 13:
+                bt1.GetComponent<Text>().text = "トナカイ";
+                break;
+            case 14:
+                bt1.GetComponent<Text>().text = "イルカ";
+                break;
+            case 15:
+                bt1.GetComponent<Text>().text = "クジラ";
+                break;
+            case 16:
+                bt1.GetComponent<Text>().text = "クマ";
+                break;
+            case 17:
+                bt1.GetComponent<Text>().text = "パンダ";
+                break;
+            case 18:
+                bt1.GetComponent<Text>().text = "ゴリラ";
+                break;
+            case 19:
+                bt1.GetComponent<Text>().text = "カバ";
+                break;
+            case 20:
+                bt1.GetComponent<Text>().text = "ヤギ";
+                break;
+            case 21:
+                bt1.GetComponent<Text>().text = "シャチ";
+                break;
+
             default:
                 break;
 
@@ -251,15 +383,65 @@ public class button_text : MonoBehaviour
                 bt2.GetComponent<Text>().text = "ネズミ";
                 break;
 
+            case 9:
+                bt2.GetComponent<Text>().text = "ゾウ";
+                break;
+            case 10:
+                bt2.GetComponent<Text>().text = "キリン";
+                break;
+            case 11:
+                bt2.GetComponent<Text>().text = "ウマ";
+                break;
+            case 12:
+                bt2.GetComponent<Text>().text = "シカ";
+                break;
+            case 13:
+                bt2.GetComponent<Text>().text = "トナカイ";
+                break;
+            case 14:
+                bt2.GetComponent<Text>().text = "イルカ";
+                break;
+            case 15:
+                bt2.GetComponent<Text>().text = "クジラ";
+                break;
+            case 16:
+                bt2.GetComponent<Text>().text = "クマ";
+                break;
+            case 17:
+                bt2.GetComponent<Text>().text = "パンダ";
+                break;
+            case 18:
+                bt2.GetComponent<Text>().text = "ゴリラ";
+                break;
+            case 19:
+                bt2.GetComponent<Text>().text = "カバ";
+                break;
+            case 20:
+                bt2.GetComponent<Text>().text = "ヤギ";
+                break;
+            case 21:
+                bt2.GetComponent<Text>().text = "シャチ";
+                break;
+
             default:
                 break;
 
         }
+        */
+        #endregion
 
     }
 
     private void sp_image_switch()
     {
+        for (int i = 0; i < 22; i++)
+        {
+            bt0.GetComponent<Text>().text = v.sp_name[v.choices[0]];
+            bt1.GetComponent<Text>().text = v.sp_name[v.choices[1]];
+            bt2.GetComponent<Text>().text = v.sp_name[v.choices[2]];
+        }
+        #region 旧コード
+        /*
         switch (v.choices[0])
         {
             case 0:
@@ -288,6 +470,46 @@ public class button_text : MonoBehaviour
                 break;
             case 8:
                 bt0.GetComponent<Text>().text = "バドミントン";
+                break;
+
+            case 9:
+                bt0.GetComponent<Text>().text = "ゴルフ";
+                break;
+            case 10:
+                bt0.GetComponent<Text>().text = "ビリヤード";
+                break;
+            case 11:
+                bt0.GetComponent<Text>().text = "アーチェリー";
+                break;
+            case 12:
+                bt0.GetComponent<Text>().text = "相撲";
+                break;
+            case 13:
+                bt0.GetComponent<Text>().text = "柔道";
+                break;
+            case 14:
+                bt0.GetComponent<Text>().text = "ハンドボール";
+                break;
+            case 15:
+                bt0.GetComponent<Text>().text = "リレー";
+                break;
+            case 16:
+                bt0.GetComponent<Text>().text = "棒高跳び";
+                break;
+            case 17:
+                bt0.GetComponent<Text>().text = "水泳";
+                break;
+            case 18:
+                bt0.GetComponent<Text>().text = "砲丸投げ";
+                break;
+            case 19:
+                bt0.GetComponent<Text>().text = "ハンマー投げ";
+                break;
+            case 20:
+                bt0.GetComponent<Text>().text = "ゲートボール";
+                break;
+            case 21:
+                bt0.GetComponent<Text>().text = "ボクシング";
                 break;
 
             default:
@@ -326,6 +548,46 @@ public class button_text : MonoBehaviour
                 bt1.GetComponent<Text>().text = "バドミントン";
                 break;
 
+            case 9:
+                bt1.GetComponent<Text>().text = "ゴルフ";
+                break;
+            case 10:
+                bt1.GetComponent<Text>().text = "ビリヤード";
+                break;
+            case 11:
+                bt1.GetComponent<Text>().text = "アーチェリー";
+                break;
+            case 12:
+                bt1.GetComponent<Text>().text = "相撲";
+                break;
+            case 13:
+                bt1.GetComponent<Text>().text = "柔道";
+                break;
+            case 14:
+                bt1.GetComponent<Text>().text = "ハンドボール";
+                break;
+            case 15:
+                bt1.GetComponent<Text>().text = "リレー";
+                break;
+            case 16:
+                bt1.GetComponent<Text>().text = "棒高跳び";
+                break;
+            case 17:
+                bt1.GetComponent<Text>().text = "水泳";
+                break;
+            case 18:
+                bt1.GetComponent<Text>().text = "砲丸投げ";
+                break;
+            case 19:
+                bt1.GetComponent<Text>().text = "ハンマー投げ";
+                break;
+            case 20:
+                bt1.GetComponent<Text>().text = "ゲートボール";
+                break;
+            case 21:
+                bt1.GetComponent<Text>().text = "ボクシング";
+                break;
+
             default:
                 break;
         }
@@ -361,9 +623,50 @@ public class button_text : MonoBehaviour
                 bt2.GetComponent<Text>().text = "バドミントン";
                 break;
 
+            case 9:
+                bt2.GetComponent<Text>().text = "ゴルフ";
+                break;
+            case 10:
+                bt2.GetComponent<Text>().text = "ビリヤード";
+                break;
+            case 11:
+                bt2.GetComponent<Text>().text = "アーチェリー";
+                break;
+            case 12:
+                bt2.GetComponent<Text>().text = "相撲";
+                break;
+            case 13:
+                bt2.GetComponent<Text>().text = "柔道";
+                break;
+            case 14:
+                bt2.GetComponent<Text>().text = "ハンドボール";
+                break;
+            case 15:
+                bt2.GetComponent<Text>().text = "リレー";
+                break;
+            case 16:
+                bt2.GetComponent<Text>().text = "棒高跳び";
+                break;
+            case 17:
+                bt2.GetComponent<Text>().text = "水泳";
+                break;
+            case 18:
+                bt2.GetComponent<Text>().text = "砲丸投げ";
+                break;
+            case 19:
+                bt2.GetComponent<Text>().text = "ハンマー投げ";
+                break;
+            case 20:
+                bt2.GetComponent<Text>().text = "ゲートボール";
+                break;
+            case 21:
+                bt2.GetComponent<Text>().text = "ボクシング";
+                break;
+
             default:
                 break;
         }
-
+        */
+        #endregion
     }
 }
