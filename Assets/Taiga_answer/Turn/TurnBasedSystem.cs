@@ -135,7 +135,7 @@ public class TurnBasedSystem : MonoBehaviourPunCallbacks, IPunTurnManagerCallbac
         answer.gameObject.SetActive(true);//追記 : ターン開始前に答えがチラチラ見える現象はここでパネルを表示しないようにすればいけるかもです
         //button_set.gameObject.SetActive(true);    削除
         //追記(岩下 9/5)
-        v.ans_time = 5;
+        v.ans_time = 9.5f;
         v.ans_time_flag = false;
 
        
