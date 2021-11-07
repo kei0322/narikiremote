@@ -46,6 +46,7 @@ public class SoundManager : MonoBehaviour
             source.Stop();
             source.clip = Mute;    //流すクリップを切り替える
             source.Play();
+            check = 0;
             v.OnOff = 0;
         }
         else if (v.OnOff > 0)
@@ -53,6 +54,7 @@ public class SoundManager : MonoBehaviour
             source.Stop();
             source.clip = tmp;    //流すクリップを切り替える
             source.Play();
+            check = 1;
             v.OnOff = 0;
         }
     }
@@ -65,7 +67,7 @@ public class SoundManager : MonoBehaviour
         //ロビーからゲームへ
         if (beforeScene == "Lobby" && nextScene.name == "New_Questions")
         {
-            if (v.OnOff >= 0)
+            if (check > 0)
             {
                 source.Stop();
                 source.clip = BGM_game;    //流すクリップを切り替える
@@ -80,7 +82,7 @@ public class SoundManager : MonoBehaviour
         //ゲームからロビーへ
         if (beforeScene == "New_Questions" && nextScene.name == "Lobby")
         {
-            if (v.OnOff >= 0)
+            if (check > 0)
             {
                 source.Stop();
                 source.clip = BGM_lobby;    //流すクリップを切り替える
