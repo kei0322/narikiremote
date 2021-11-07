@@ -13,7 +13,7 @@ public class AnswerTimer : MonoBehaviourPunCallbacks
 
     void Start()
     {
-        v.ans_time = 5.0f;//5秒
+        v.ans_time = 9.5f;//5秒
     }
 
     // Update is called once per frame
@@ -22,15 +22,21 @@ public class AnswerTimer : MonoBehaviourPunCallbacks
         if (!v.ans_time_flag)
         {
             v.ans_time -= Time.deltaTime;
-            time_text.text = "残り" + v.ans_time.ToString("0") + "秒";
-            if (v.ans_time <= 0)
+            if (v.ans_time <= 0.5f)
             {
                 time_text.text = "読み込み中";
                 v.turn_frag = true;
                 v.ans_time_flag = true;
                 v.start_flag = false;
                 Debug.Log(v.turn_frag);
-            }  
+            }else if (v.ans_time <= 3.5f)
+            {
+                time_text.text = "残り" + v.ans_time.ToString("0") + "秒";
+            }
+            else
+            {
+                time_text.text = "";
+            }
         }
     }
 }
