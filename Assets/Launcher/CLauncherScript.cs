@@ -6,6 +6,10 @@ using Photon.Realtime;
 
 public class CLauncherScript : MonoBehaviourPunCallbacks
 {
+    private void Start()
+    {
+        Screen.SetResolution(800, 600, false, 60);
+    }
     #region Public変数定義
 
     //Public変数の定義はココで
